@@ -4,7 +4,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    inputs.Flocke.packages.${system}.default
+    inputs.Lumi.packages.${system}.default
     lazygit
   ];
 }

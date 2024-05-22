@@ -18,7 +18,7 @@
 
     nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
 
-    Flocke.url = "github:bananad3v/Flocke";
+    Lumi.url = "github:bananad3v/Lumi";
 
     catppuccin-grub = {
       url = "github:catppuccin/grub";

@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "Flocke": {
+    "Lumi": {
       "inputs": {
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
@@ -10,13 +10,13 @@
         "lastModified": 1716233366,
         "narHash": "sha256-5hgFRNkDZNKrmGv4EXmwljA0c+ElaS7SvClO8gJmk9E=",
         "owner": "bananad3v",
-        "repo": "Flocke",
+        "repo": "Lumi",
         "rev": "5b657cccac21def813c306bc56cc693d4d36c566",
         "type": "github"
       },
       "original": {
         "owner": "bananad3v",
-        "repo": "Flocke",
+        "repo": "Lumi",
         "type": "github"
       }
     },
@@ -119,7 +119,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "nixpkgs"
         ]
@@ -290,7 +290,7 @@
     "flake-parts_2": {
       "inputs": {
         "nixpkgs-lib": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "nixpkgs"
         ]
@@ -665,7 +665,7 @@
     "gitignore": {
       "inputs": {
         "nixpkgs": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "pre-commit-hooks",
           "nixpkgs"
@@ -737,7 +737,7 @@
     "home-manager": {
       "inputs": {
         "nixpkgs": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "nixpkgs"
         ]
@@ -932,7 +932,7 @@
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "nixpkgs"
         ]
@@ -1484,12 +1484,12 @@
         "flake-utils": "flake-utils_2",
         "gitignore": "gitignore",
         "nixpkgs": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "nixpkgs"
         ],
         "nixpkgs-stable": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "nixpkgs"
         ]
@@ -1530,7 +1530,7 @@
     },
     "root": {
       "inputs": {
-        "Flocke": "Flocke",
+        "Lumi": "Lumi",
         "auto-cpufreq": "auto-cpufreq",
         "catppuccin-grub": "catppuccin-grub",
         "firefox-addons": "firefox-addons",
@@ -1817,7 +1817,7 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
-          "Flocke",
+          "Lumi",
           "nixvim",
           "nixpkgs"
         ]
