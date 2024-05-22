@@ -1,0 +1,7 @@
+keys:
+  - &primary f3c42fdb005d4574a76beb9cebc18613e7896064
+creation_rules:
+  - path_regex: hosts/secrets.yaml$
+    key_groups:
+      - pgp:
+        - *primary
