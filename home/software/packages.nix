@@ -95,7 +95,7 @@
     commitizen
     python3
     # insomnia
-    # godot_4
+    godot_4
     nodejs_20
     bun
     # gcc

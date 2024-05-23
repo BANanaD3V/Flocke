@@ -45,7 +45,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              backupFileExtension = "backup";
+              backupFileExtension = "back";
 
               inherit extraSpecialArgs;
 
