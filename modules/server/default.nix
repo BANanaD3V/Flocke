@@ -9,7 +9,7 @@
     ./searx.nix
     ./scrutiny.nix
     ./0x0.nix
-    # ./postgres.nix
+    ./postgres.nix
     ./transmission.nix
     ./adguard.nix
     ./glances.nix
