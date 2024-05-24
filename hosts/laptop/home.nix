@@ -1,12 +1,12 @@
 {...}: {
   wayland.windowManager.hyprland = {
-    settings.env = [
-      "WLR_DRM_DEVICES,/dev/dri/card1"
-    ];
+    # settings.env = [
+    #   "WLR_DRM_DEVICES,/home/banana/.config/hypr/card"
+    # ];
   };
 
   home-manager = {
-    colorscheme = "biscuit";
+    colorscheme = "catppuccin";
     graphical.enable = true;
     displays = [
       {
