@@ -1,4 +1,5 @@
 {...}: {
+  server.enable = false;
   nixos = {
     nvidia = {
       drivers = {

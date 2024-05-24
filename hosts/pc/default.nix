@@ -10,6 +10,7 @@
   };
   services.getty.autologinUser = username;
 
+  server.enable = false;
   nixos = {
     nvidia = {
       drivers = {

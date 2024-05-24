@@ -1,5 +1,6 @@
 {
   lib,
+  config,
   host,
   ...
 }: {
@@ -18,6 +19,8 @@
     ./jellyfin.nix
     ./invidious.nix
   ];
-  config.virtualisation.docker.enable = true;
-  config.services.docker-compose.enable = true;
+  config = lib.mkIf config.server.enable {
+    virtualisation.docker.enable = true;
+    services.docker-compose.enable = true;
+  };
 }
