@@ -11,7 +11,7 @@
       enable = true;
       package = pkgs.invidious;
       port = 9000;
-      database.createLocally = false;
+      database.createLocally = true;
       # hmacKeyFile = config.sops.secrets."invidious/hmac_key".path;
       settings = {
         domain = "invidious.banana.is-cool.dev";
@@ -19,7 +19,8 @@
         external_port = 443;
         check_tables = true;
         db = {
-          url = "postgres://invidious:invidious@localhost:5432/invidious";
+          user = "invidious";
+          dbname = "invidious";
         };
         statistics_enabled = true;
         admins = ["banana"];
