@@ -4,6 +4,7 @@
   lib,
   system,
   username,
+  useremail,
   ...
 }: let
   mkHost = host: let
@@ -13,7 +14,7 @@
     };
 
     extraSpecialArgs = {
-      inherit inputs host isNixOS username;
+      inherit inputs host isNixOS username useremail;
     };
 
     homeManagerImports = [

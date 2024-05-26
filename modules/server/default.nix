@@ -14,6 +14,7 @@
     ./adguard.nix
     ./glances.nix
     ./caddy.nix
+    # ./nginx.nix
     ./speedtest.nix
     ./homepage.nix
     ./jellyfin.nix

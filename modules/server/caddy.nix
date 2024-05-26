@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -7,6 +8,7 @@
   config = lib.mkIf config.server.caddy.enable {
     services.caddy = {
       enable = true;
+
       virtualHosts = {
         "invidious.banana.is-cool.dev".extraConfig = ''
           reverse_proxy http://0.0.0.0:9000
