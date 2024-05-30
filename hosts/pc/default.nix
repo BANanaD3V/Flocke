@@ -14,7 +14,7 @@
   nixos = {
     nvidia = {
       drivers = {
-        version = "production";
+        version = "beta";
         enable = true;
       };
       hyprland.enable = true;

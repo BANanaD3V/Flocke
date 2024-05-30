@@ -6,7 +6,7 @@ with config.colorScheme.palette; ''
         border-radius: 0px;
     }
 
-    window#waybar {
+    #waybar {
         background-color: #${base00};
         border-radius: 0px;
         transition-property: background-color;

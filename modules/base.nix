@@ -33,15 +33,15 @@
     efiSysMountPoint = "/boot";
   };
 
-  boot.kernel.sysctl = {
-    "vm.max_map_count" = 1048576;
-  };
+  # boot.kernel.sysctl = {
+  #   "vm.max_map_count" = 1048576;
+  # };
 
   # Kernel for star citizen
-  # boot.kernel.sysctl = lib.mkIf config.hm.home-manager.gaming.star-citizen.enable {
-  #   "vm.max_map_count" = 16777216;
-  #   "fs.file-max" = 524288;
-  # };
+  boot.kernel.sysctl = lib.mkIf config.hm.home-manager.gaming.star-citizen.enable {
+    "vm.max_map_count" = 16777216;
+    "fs.file-max" = 524288;
+  };
 
   # Fix USB sticks not mounting or being listed:
   services.devmon.enable = true;

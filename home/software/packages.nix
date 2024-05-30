@@ -149,7 +149,7 @@
     wine-staging
     winetricks
     # inputs.game-rs.packages.x86_64-linux.default
-    # inputs.nix-gaming.packages.${pkgs.system}.proton-ge-bin
+    inputs.nix-gaming.packages.${pkgs.system}.star-citizen
 
     # Sound
     pipewire

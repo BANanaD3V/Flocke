@@ -18,8 +18,8 @@ python3Packages.buildPythonApplication rec {
   src = fetchFromGitHub {
     repo = pname;
     owner = pname;
-    rev = "a5fc6df4ac498c1b454a9305db326467b2d0906f";
-    sha256 = "sha256-5BA4+937r4+cC9Ceil6ScC6AVtnRqVTlpzBA6vNbatc=";
+    rev = "a50d9c06d19a4f7ef393a70611c91d4e7cf9a86e";
+    sha256 = "sha256-BeSPmcbK5GTUWlT3Fhm0MDfA0Go8JlCxl/PHgUN3sX0=";
   };
 
   postPatch = ''

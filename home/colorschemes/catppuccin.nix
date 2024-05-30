@@ -28,6 +28,6 @@
         base0F = "#f2cdcd";
       };
     };
-    home-manager.wallpaper = "ship.png";
+    home-manager.wallpaper = "ship-2.png";
   };
 }

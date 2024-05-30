@@ -19,7 +19,7 @@
     nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
 
     Lumi.url = "github:bananad3v/Lumi";
-
+    waybar.url = "github:Alexays/Waybar";
     catppuccin-grub = {
       url = "github:catppuccin/grub";
       flake = false;
@@ -45,12 +45,7 @@
     };
     nix-colors.url = "github:misterio77/nix-colors";
     prism.url = "github:IogaMaster/prism";
-    # nixvim = {
-    #   url = "github:nix-community/nixvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     game-rs.url = "github:amanse/game-rs";
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     nix-alien.url = "github:thiagokokada/nix-alien";
     sops-nix.url = "github:Mic92/sops-nix";
     sddm-sugar-candy-nix = {
