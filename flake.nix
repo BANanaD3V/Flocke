@@ -51,6 +51,7 @@
     sddm-sugar-candy-nix = {
       url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
     };
+    wayfreeze.url = "github:jappie3/wayfreeze";
   };
 
   outputs = {

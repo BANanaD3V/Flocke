@@ -122,7 +122,7 @@
         [
           # Other binds
 
-          ",PRINT, exec, grimblast --freeze copy area"
+          ",PRINT, exec, wayfreeze & PID=$!; sleep .1; grim -g \"$(slurp)\" - | wl-copy; kill $PID"
           "$mainMod, Return, exec, kitty"
           "$mainMod, U, exec, uploader"
           "$mainMod, N, exec, swaync-client -t"

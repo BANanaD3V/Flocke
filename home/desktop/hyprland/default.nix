@@ -15,6 +15,7 @@
       xwaylandvideobridge
       libnotify
       wl-gammarelay-rs
+      wayfreeze
     ];
 
     # Import wallpaper

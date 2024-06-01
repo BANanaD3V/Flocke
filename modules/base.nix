@@ -84,28 +84,28 @@
   # X server
   services.xserver = {
     enable = config.hm.home-manager.graphical.enable;
-    displayManager.sddm = {
-      enable = lib.mkForce config.hm.home-manager.graphical.enable;
-      wayland.enable = true;
-      sugarCandyNix = {
-        enable = true; # This enables SDDM automatically and set its theme to
-        # "sddm-sugar-candy-nix"
-        settings = with config.hm.colorScheme.palette; {
-          # Set your configuration options here.
-          # Here is a simple example:
-          Background = lib.cleanSource ../home/desktop/hyprland/wallpapers/${config.hm.home-manager.wallpaper};
-          FormPosition = "right";
-          HaveFormBackground = true;
-          PartialBlur = true;
-          OverrideLoginButtonTextColor = "#${base05}";
-          MainColor = "#${base05}";
-          AccentColor = "#${base07}";
-          BackgroundColor = "#${base00}";
-          # ...
-        };
+    excludePackages = with pkgs; [xterm];
+  };
+  services.displayManager.sddm = {
+    enable = lib.mkForce config.hm.home-manager.graphical.enable;
+    wayland.enable = true;
+    sugarCandyNix = {
+      enable = true; # This enables SDDM automatically and set its theme to
+      # "sddm-sugar-candy-nix"
+      settings = with config.hm.colorScheme.palette; {
+        # Set your configuration options here.
+        # Here is a simple example:
+        Background = lib.cleanSource ../home/desktop/hyprland/wallpapers/${config.hm.home-manager.wallpaper};
+        FormPosition = "right";
+        HaveFormBackground = true;
+        PartialBlur = true;
+        OverrideLoginButtonTextColor = "#${base05}";
+        MainColor = "#${base05}";
+        AccentColor = "#${base07}";
+        BackgroundColor = "#${base00}";
+        # ...
       };
     };
-    excludePackages = with pkgs; [xterm];
   };
 
   # Printing support
