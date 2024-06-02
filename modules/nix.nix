@@ -1,5 +1,7 @@
 {
+  host,
   inputs,
+  lib,
   pkgs,
   username,
   ...
@@ -19,7 +21,7 @@
 in {
   # Nix
   nix = {
-    package = pkgs.nixVersions.latest;
+    # package = lib.mkIf (host != "server") pkgs.nixVersions.latest;
     settings = {
       experimental-features = ["nix-command" "flakes"];
       # substituters = [

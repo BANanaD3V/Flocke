@@ -7,6 +7,7 @@
   options.server.enable = lib.mkEnableOption "Enable server suite" // {default = host == "server";};
   imports = [
     ./searx.nix
+    # ./asf.nix
     ./scrutiny.nix
     ./0x0.nix
     ./postgres.nix
@@ -21,7 +22,10 @@
     ./invidious.nix
   ];
   config = lib.mkIf config.server.enable {
-    virtualisation.docker.enable = true;
+    virtualisation.docker = {
+      enable = true;
+      extraOptions = "--registry-mirror https://mirror.gcr.io";
+    };
     services.docker-compose.enable = true;
   };
 }

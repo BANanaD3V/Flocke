@@ -8,13 +8,22 @@
   ...
 }: let
   mkHost = host: let
-    pkgs = import inputs.nixpkgs-stable {
+    pkgsUnstable = import
+    inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
-
+    pkgsStable = import
+    inputs.nixpkgs-stable {
+      inherit system;
+      config.allowUnfree = true;
+    };
+    pkgs =
+      if host == "server"
+      then pkgsStable #pkgsStable TODO: BROKEN
+      else pkgsUnstable;
     extraSpecialArgs = {
-      inherit inputs host isNixOS username useremail;
+      inherit inputs host isNixOS username useremail pkgsStable pkgsUnstable pkgs;
     };
 
     homeManagerImports = [
@@ -24,7 +33,6 @@
       inputs.schizofox.homeManagerModule
       inputs.nix-colors.homeManagerModules.default
       inputs.prism.homeModules.prism
-      # inputs.nixvim.homeManagerModules.nixvim
     ];
   in
     if isNixOS
@@ -62,11 +70,8 @@
       }
     else
       inputs.home-manager.lib.homeManagerConfiguration {
-        inherit extraSpecialArgs;
+        inherit extraSpecialArgs pkgs;
 
-        pkgs = import inputs.nixpkgs {
-          config.allowUnfree = true;
-        };
         modules = homeManagerImports;
       };
 in
