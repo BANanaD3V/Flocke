@@ -20,6 +20,7 @@
     ./homepage.nix
     ./jellyfin.nix
     ./invidious.nix
+    ./pufferpanel.nix
   ];
   config = lib.mkIf config.server.enable {
     virtualisation.docker = {

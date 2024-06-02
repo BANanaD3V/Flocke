@@ -16,6 +16,7 @@
       libnotify
       wl-gammarelay-rs
       wayfreeze
+      grimblast
     ];
 
     # Import wallpaper
