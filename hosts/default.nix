@@ -20,7 +20,7 @@
     };
     pkgs =
       if host == "server"
-      then pkgsStable #pkgsStable TODO: BROKEN
+      then pkgsStable
       else pkgsUnstable;
     extraSpecialArgs = {
       inherit inputs host isNixOS username useremail pkgsStable pkgsUnstable pkgs;
