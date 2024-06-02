@@ -70,7 +70,7 @@
       }
     else
       inputs.home-manager.lib.homeManagerConfiguration {
-        inherit extraSpecialArgs pkgs;
+        inherit extraSpecialArgs;
 
         modules = homeManagerImports;
       };

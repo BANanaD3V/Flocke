@@ -208,7 +208,12 @@
     };
     zsh.enable = true;
   };
-
+  # Nixos docs
+  documentation = {
+    nixos.enable = false;
+    info.enable = false;
+    man.enable = false;
+  };
   # System stateversion
   system.stateVersion = "23.05";
 }
