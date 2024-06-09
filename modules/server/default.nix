@@ -7,15 +7,15 @@
   options.server.enable = lib.mkEnableOption "Enable server suite" // {default = host == "server";};
   imports = [
     ./searx.nix
-    # ./asf.nix
+    ./nextcloud.nix
     ./scrutiny.nix
     ./0x0.nix
     ./postgres.nix
     ./transmission.nix
     ./adguard.nix
     ./glances.nix
-    ./caddy.nix
-    # ./nginx.nix
+    # ./caddy.nix
+    ./nginx.nix
     ./speedtest.nix
     ./homepage.nix
     ./jellyfin.nix
