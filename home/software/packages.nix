@@ -90,7 +90,8 @@
     obsidian
 
     # Development
-    dotnet-sdk_8
+    dotnetCorePackages.sdk_8_0_2xx
+    # dotnet-sdk_8
     texliveFull
     commitizen
     python3
@@ -98,11 +99,13 @@
     godot_4
     nodejs_20
     bun
+    yarn
     # gcc
     # libstdcxx5
     # zlib
     # gnumake
     gh
+    icu74
     jdk17
     filezilla
     docker
