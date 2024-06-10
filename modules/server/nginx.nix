@@ -7,6 +7,7 @@
   options.server.nginx.enable = lib.mkEnableOption "Enable nginx" // {default = config.server.enable;};
   config = lib.mkIf config.server.nginx.enable {
     services.nginx.enable = true;
+    services.nginx.clientMaxBodySize = "512M";
     services.nginx.virtualHosts = {
       "invidious.banana.is-cool.dev" = {
         addSSL = true;
