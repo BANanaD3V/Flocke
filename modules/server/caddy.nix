@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  useremail,
   ...
 }: {
   options.server.caddy.enable = lib.mkEnableOption "Enable caddy" // {default = config.server.enable;};
@@ -20,6 +21,10 @@
           reverse_proxy http://0.0.0.0:5555
         '';
       };
+    };
+    security.acme = {
+      acceptTerms = true;
+      defaults.email = useremail;
     };
   };
 }
