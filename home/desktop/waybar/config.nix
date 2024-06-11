@@ -8,11 +8,14 @@
     height = 60;
     spacing = 10;
 
-    modules-left = [
-      "custom/media"
-      "custom/cava"
-      "group/group-audio"
-    ];
+    modules-left =
+      [
+        "custom/media"
+      ]
+      ++ (lib.optionals (!config.home-manager.battery.enable) ["custom/cava"])
+      ++ [
+        "group/group-audio"
+      ];
     modules-center = ["hyprland/workspaces"];
     modules-right =
       (lib.optionals config.home-manager.backlight.enable ["backlight"])
