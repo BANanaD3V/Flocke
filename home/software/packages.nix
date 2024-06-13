@@ -90,7 +90,7 @@
     obsidian
 
     # Development
-    dotnetCorePackages.sdk_8_0_2xx
+    # dotnetCorePackages.sdk_8_0_2xx
     # dotnet-sdk_8
     texliveFull
     commitizen

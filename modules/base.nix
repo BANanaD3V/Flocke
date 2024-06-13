@@ -68,7 +68,7 @@
 
   # Networking
   networking = {
-    hostName = "${username}-${host}";
+    hostName = "${host}";
     networkmanager.enable = true;
     firewall.enable = false;
     extraHosts = lib.mkIf config.hm.home-manager.gaming.star-citizen.enable "127.0.0.1 modules-cdn.eac-prod.on.epicgames.com";
