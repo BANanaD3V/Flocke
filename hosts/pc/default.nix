@@ -4,7 +4,7 @@
     enable = true;
   };
 
-  services.xserver.displayManager.autoLogin = {
+  services.displayManager.autoLogin = {
     user = username;
     enable = true;
   };

@@ -22,7 +22,7 @@
     gaming = {
       enable = true;
       steam.enable = true;
-      star-citizen.enable = true;
+      star-citizen.enable = false;
     };
   };
   # xresources.properties = {

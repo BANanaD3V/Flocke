@@ -14,15 +14,20 @@
 in {
   config = lib.mkIf config.nixos.nvidia.drivers.enable {
     # Make sure opengl is enabled
-    hardware.opengl = {
+    hardware.graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
       extraPackages = with pkgs; [
         vaapiVdpau
         libvdpau-va-gl
         nvidia-vaapi-driver
       ];
+    };
+
+    boot = {
+      # use nvidia framebuffer
+      # https://wiki.gentoo.org/wiki/NVIDIA/nvidia-drivers#Kernel_module_parameters for more info.
+      kernelParams = ["nvidia-drm.fbdev=1"];
     };
 
     # Tell Xorg to use the nvidia driver (also valid for Wayland)
@@ -52,7 +57,6 @@ in {
     };
     environment.sessionVariables = {
       NIXOS_OZONE_WL = "1";
-      WLR_NO_HARDWARE_CURSORS = "1";
     };
 
     environment.variables = lib.mkIf config.nixos.nvidia.hyprland.enable {

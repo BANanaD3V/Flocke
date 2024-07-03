@@ -8,7 +8,7 @@
     ];
 
     pointerCursor = {
-      name = "Catppuccin-Mocha-Peach-Cursors";
+      name = "catppuccin-mocha-peach-cursors";
       package = pkgs.catppuccin-cursors.mochaPeach;
       size = 24;
       gtk.enable = true;
@@ -19,7 +19,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Standard-Lavender-Dark";
+      name = "catppuccin-mocha-lavender-standard+default";
       package = pkgs.catppuccin-gtk.override {
         accents = ["lavender"];
         size = "standard";
@@ -48,11 +48,11 @@
   };
 
   home.sessionVariables = {
-    GTK_THEME = "Catppuccin-Mocha-Standard-Lavender-Dark";
+    GTK_THEME = "catppuccin-mocha-lavender-standard+default";
   };
 
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme.name = "gtk";
   };
 }

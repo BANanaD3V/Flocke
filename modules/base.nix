@@ -57,7 +57,7 @@
   };
   services.tailscale.enable = true;
   # Hardware
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -74,7 +74,7 @@
     extraHosts = lib.mkIf config.hm.home-manager.gaming.star-citizen.enable "127.0.0.1 modules-cdn.eac-prod.on.epicgames.com";
   };
   services.blueman.enable = config.hm.home-manager.bluetooth.enable;
-
+  systemd.services.NetworkManager-wait-online.enable = false;
   # XDG Desktop Portal stuff
   xdg.portal = {
     enable = true;

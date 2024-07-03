@@ -116,6 +116,7 @@
     # glibc
     # figma-linux
     vscode
+    jetbrains.idea-community
     # (pkgs.vscode.overrideAttrs (o: let
     #   version = "1.81.1";
     #   plat = "linux-x64";
@@ -149,10 +150,10 @@
     gamescope
     prismlauncher
     # inputs.getchoo.packages.${pkgs.system}.modrinth-app
-    wine-staging
+    # wine-staging
     winetricks
     # inputs.game-rs.packages.x86_64-linux.default
-    inputs.nix-gaming.packages.${pkgs.system}.star-citizen
+    # inputs.nix-gaming.packages.${pkgs.system}.star-citizen
 
     # Sound
     pipewire

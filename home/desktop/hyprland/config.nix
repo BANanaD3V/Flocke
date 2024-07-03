@@ -31,6 +31,7 @@
         kb_options = "grp:alt_shift_toggle,ctrl:nocaps";
 
         follow_mouse = 1;
+        mouse_refocus = true;
 
         touchpad = {
           natural_scroll = "no";
@@ -49,6 +50,10 @@
         "col.inactive_border" = "rgb(${base02})";
         layout = "dwindle";
         allow_tearing = true;
+      };
+
+      cursor = {
+        no_hardware_cursors = true;
       };
 
       decoration = {
@@ -85,10 +90,6 @@
         pseudotile = "yes";
         preserve_split = "yes";
         force_split = 2;
-      };
-
-      master = {
-        new_is_master = true;
       };
 
       misc = {
@@ -213,7 +214,6 @@
         "noanim,class:^(xwaylandvideobridge)$"
         "nofocus,class:^(xwaylandvideobridge)$"
         "noinitialfocus,class:^(xwaylandvideobridge)$"
-        "immediate, class:^(star-citizen)$"
       ];
 
       # Layer rules
@@ -221,12 +221,6 @@
       layerrule = [
         "blur, waybar"
         "blur, kitty"
-      ];
-
-      # Tearing
-
-      env = [
-        "WLR_DRM_NO_ATOMIC,1"
       ];
 
       # Autostart
