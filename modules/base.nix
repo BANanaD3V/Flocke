@@ -192,7 +192,6 @@
   # Virtualization
   virtualisation.libvirtd.enable = true;
   virtualisation.waydroid.enable = true;
-  virtualisation.podman.enable = true;
   programs.dconf.enable = true; # virt-manager requires dconf to remember settings
 
   # Garbage collection
