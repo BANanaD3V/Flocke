@@ -76,6 +76,6 @@
       };
 in
   builtins.listToAttrs (map (host: {
-    name = "${username}-${host}";
+    name = "${host}";
     value = mkHost host;
   }) ["pc" "laptop" "server"])

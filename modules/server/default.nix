@@ -4,7 +4,7 @@
   host,
   ...
 }: {
-  options.server.enable = lib.mkEnableOption "Enable server suite" // {default = host == "server";};
+  options.server.enable = lib.mkEnableOption "Enable server suite" // {default = false;}; # // {default = host == "server";};
   imports = [
     ./searx.nix
     ./nextcloud.nix
