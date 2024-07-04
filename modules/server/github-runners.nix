@@ -8,7 +8,7 @@
   config = lib.mkIf config.server.github-runners.enable {
     services.github-runners = {
       nixos-config = {
-        enable = true;
+        enable = false;
         name = "nixos-config";
         url = "https://github.com/BANanaD3V/Flocke/";
         tokenFile = config.sops.secrets."github_runners/nixos_config".path;
