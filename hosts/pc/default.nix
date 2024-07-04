@@ -10,7 +10,6 @@
   };
   services.getty.autologinUser = username;
 
-  server.github-runners.enable = true;
   server.enable = false;
   nixos = {
     nvidia = {
