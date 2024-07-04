@@ -141,7 +141,6 @@
     # Gaming
     r2modman
     bottles
-    steam
     steamcmd
     heroic
     gamemode
@@ -149,6 +148,7 @@
     mangohud
     gamescope
     prismlauncher
+    blockbench
     # inputs.getchoo.packages.${pkgs.system}.modrinth-app
     # wine-staging
     winetricks
