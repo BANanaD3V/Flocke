@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -7,6 +8,7 @@
   config = lib.mkIf config.server.transmission.enable {
     services.transmission = {
       enable = true;
+      package = pkgs.transmission_4;
       settings = {
         rpc-bind-address = "0.0.0.0";
         rpc-port = 9091;

@@ -8,22 +8,16 @@
   ...
 }: let
   mkHost = host: let
-    pkgsUnstable = import
-    inputs.nixpkgs {
+    pkgsStable = import inputs.nixpkgs-stable {
       inherit system;
       config.allowUnfree = true;
     };
-    pkgsStable = import
-    inputs.nixpkgs-stable {
+    pkgs = import inputs.nixpkgs {
       inherit system;
       config.allowUnfree = true;
     };
-    pkgs =
-      if host == "server"
-      then pkgsStable
-      else pkgsUnstable;
     extraSpecialArgs = {
-      inherit inputs host isNixOS username useremail pkgsStable pkgsUnstable pkgs;
+      inherit inputs host isNixOS username useremail pkgsStable pkgs;
     };
 
     homeManagerImports = [
