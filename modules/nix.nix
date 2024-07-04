@@ -14,7 +14,8 @@
       git add \"$untracked_files\" >/dev/null
     fi
 
-    sudo nixos-rebuild switch --flake .
+    nh os switch
+    #sudo nixos-rebuild switch --flake .
     echo -e "Switched to Generation \033[1m$(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')\033[0m"
     popd >/dev/null
   '';

@@ -150,7 +150,7 @@
     prismlauncher
     blockbench
     # inputs.getchoo.packages.${pkgs.system}.modrinth-app
-    # wine-staging
+    wine-staging
     winetricks
     # inputs.game-rs.packages.x86_64-linux.default
     # inputs.nix-gaming.packages.${pkgs.system}.star-citizen

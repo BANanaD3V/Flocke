@@ -165,6 +165,7 @@
 
   # Env packages
   environment.systemPackages = with pkgs; [
+    nh
     virt-manager
     gnome.gnome-disk-utility
     gutenprint
@@ -177,6 +178,10 @@
     polkit
     polkit_gnome
   ];
+
+  environment.sessionVariables = {
+    FLAKE = "/home/${username}/nixos-config";
+  };
 
   # Fonts
   fonts.packages = with pkgs; [
