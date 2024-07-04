@@ -51,6 +51,9 @@ jobs:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
 
+      - name: "Cache"
+        uses: DeterminateSystems/magic-nix-cache-action@main
+
       - name: "Install Cachix"
         uses: cachix/cachix-action@v12
         with:
@@ -104,6 +107,9 @@ jobs:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
 
+      - name: "Cache"
+        uses: DeterminateSystems/magic-nix-cache-action@main
+
       - name: "Install Cachix"
         uses: cachix/cachix-action@v12
         with:
@@ -156,6 +162,9 @@ jobs:
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      
+      - name: "Cache"
+        uses: DeterminateSystems/magic-nix-cache-action@main
 
       - name: "Install Cachix"
         uses: cachix/cachix-action@v12
