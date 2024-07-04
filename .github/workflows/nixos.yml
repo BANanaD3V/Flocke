@@ -12,6 +12,7 @@ on:
 
 jobs:
   build-pc:
+    name: "Build PC host"
     runs-on: ubuntu-latest
     steps:
       - name: "Create Dir for Mounting more Disk Space"
@@ -64,6 +65,7 @@ jobs:
         run: |
           nix flake check --accept-flake-config --no-build
   build-laptop:
+    name: "Build laptop host"
     runs-on: ubuntu-latest
     steps:
       - name: "Create Dir for Mounting more Disk Space"
@@ -116,6 +118,7 @@ jobs:
         run: |
           nix flake check --accept-flake-config --no-build
   build-server:
+    name: "Build server host"
     runs-on: ubuntu-latest
     steps:
       - name: "Create Dir for Mounting more Disk Space"
