@@ -115,6 +115,7 @@
     # glib
     # glibc
     # figma-linux
+    direnv
     vscode
     jetbrains.idea-community
     # (pkgs.vscode.overrideAttrs (o: let

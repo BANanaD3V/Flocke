@@ -38,6 +38,9 @@
 
       # Source starship
       source <(starship init zsh --print-full-init)
+
+      # Direnv
+      eval "$(direnv hook zsh)"
     '';
   };
 }
