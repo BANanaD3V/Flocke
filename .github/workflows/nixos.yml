@@ -1,10 +1,5 @@
 name: CI
 
-inputs:
-  host:
-    description: 'What host to build'
-    required: true
-
 on:
   push:
   pull_request:
