@@ -11,9 +11,7 @@ jobs:
       id-token: "write"
       contents: "read"
     steps:
-      - name: "Create Dir for Mounting more Disk Space"
-        run: |
-          sudo mkdir /nix
+      - uses: DeterminateSystems/nix-installer-action@main
       - name: "Maximize Disk Space 1"
         run: |
           sudo rm -rf $AGENT_TOOLSDIRECTORY
@@ -37,7 +35,6 @@ jobs:
           remove-codeql: "true"
           remove-docker-images: "true"
       - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: DeterminateSystems/flake-checker-action@main
       - name: Run `nix build`
