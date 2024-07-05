@@ -1,5 +1,10 @@
 name: CI
 
+inputs:
+  host:
+    description: 'What host to build'
+    required: true
+
 on:
   push:
   pull_request:
@@ -16,4 +21,4 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - uses: DeterminateSystems/flake-checker-action@main
       - name: Run `nix build`
-        run: nix build .#pc
+        run: nix build .#nixosConfigurations.pc.config.system.build.toplevel --accept-flake-config
