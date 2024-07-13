@@ -34,7 +34,7 @@
       bindkey "^[[1;5D" backward-word
 
       # Eval thefuck
-      eval $(thefuck --alias)
+      # eval $(thefuck --alias)
 
       # Source starship
       source <(starship init zsh --print-full-init)

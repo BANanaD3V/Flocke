@@ -18,7 +18,7 @@
     bat
     cava
     feh
-    thefuck
+    # thefuck
     unrar
     openvpn
     ffmpeg-full
@@ -32,7 +32,7 @@
     mpc-cli
     freetube
     flatpak
-    calcure
+    # calcure
     qbittorrent
     kdenlive
     krita
@@ -99,6 +99,7 @@
     godot_4
     nodejs_20
     bun
+    nodePackages.pnpm
     yarn
     # gcc
     # libstdcxx5
