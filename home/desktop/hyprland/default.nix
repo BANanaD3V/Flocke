@@ -15,7 +15,6 @@
       xwaylandvideobridge
       libnotify
       wl-gammarelay-rs
-      wayfreeze
       grimblast
     ];
 

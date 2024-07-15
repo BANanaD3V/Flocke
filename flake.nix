@@ -10,19 +10,29 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    spicetify-nix.url = "github:MichaelPachec0/spicetify-nix";
+    spicetify-nix = {
+      url = "github:MichaelPachec0/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    nixpkgs-wayland.url = "github:nix-community/nixpkgs-wayland";
+    nixpkgs-wayland = {
+      url = "github:nix-community/nixpkgs-wayland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    Lumi.url = "github:bananad3v/Lumi";
-    waybar.url = "github:Alexays/Waybar";
-    catppuccin-grub = {
-      url = "github:catppuccin/grub";
-      flake = false;
+    Lumi = {
+      url = "github:bananad3v/Lumi";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     auto-cpufreq = {
@@ -30,28 +40,27 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nur.url = "github:nix-community/NUR";
-
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    getchoo = {
-      url = "github:getchoo/nix-exprs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
     schizofox = {
       url = "github:schizofox/schizofox";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-colors.url = "github:misterio77/nix-colors";
-    prism.url = "github:IogaMaster/prism";
-    game-rs.url = "github:amanse/game-rs";
-    nix-alien.url = "github:thiagokokada/nix-alien";
-    sops-nix.url = "github:Mic92/sops-nix";
+    nix-colors = {
+      url = "github:misterio77/nix-colors";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     sddm-sugar-candy-nix = {
       url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    wayfreeze.url = "github:jappie3/wayfreeze";
   };
 
   outputs = {

@@ -22,7 +22,6 @@
       ../options/home
       inputs.schizofox.homeManagerModule
       inputs.nix-colors.homeManagerModules.default
-      inputs.prism.homeModules.prism
     ];
   in
     if isNixOS
@@ -36,7 +35,6 @@
           ../modules
           ../pkgs
           ../options/nixos
-          inputs.nur.nixosModules.nur
           inputs.home-manager.nixosModules.home-manager
           inputs.sddm-sugar-candy-nix.nixosModules.default
           inputs.sops-nix.nixosModules.sops

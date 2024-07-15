@@ -90,6 +90,9 @@
     obsidian
 
     # Development
+    cargo
+    rustfmt
+    rustc
     # dotnetCorePackages.sdk_8_0_2xx
     # dotnet-sdk_8
     texliveFull
