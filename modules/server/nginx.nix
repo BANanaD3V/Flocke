@@ -31,6 +31,14 @@
           proxyPass = "http://127.0.0.1:5555";
         };
       };
+
+      "navidrome.banana.is-cool.dev" = {
+        addSSL = true;
+        enableACME = true;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:4533";
+        };
+      };
     };
     security.acme = {
       acceptTerms = true;

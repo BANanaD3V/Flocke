@@ -12,7 +12,6 @@
   # };
   #
   nixos = {};
-  server.jellyfin.enable = false;
   server."0x0".enable = false;
 
   users.users.banana.openssh.authorizedKeys.keys = [

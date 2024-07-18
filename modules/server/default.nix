@@ -6,10 +6,13 @@
 }: {
   options.server.enable = lib.mkEnableOption "Enable server suite" // {default = host == "server";};
   imports = [
+    ./cloudflared.nix
+    ./navidrome.nix
     ./searx.nix
     ./nextcloud.nix
     ./scrutiny.nix
     ./0x0.nix
+    ./slskd.nix
     ./postgres.nix
     ./transmission.nix
     ./adguard.nix

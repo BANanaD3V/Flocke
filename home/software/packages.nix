@@ -89,6 +89,7 @@
     todoist-electron
     obsidian
     nicotine-plus
+    beets
 
     # Development
     cargo
