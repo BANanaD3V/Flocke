@@ -32,7 +32,6 @@
 
     Lumi = {
       url = "github:bananad3v/Lumi";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     auto-cpufreq = {
