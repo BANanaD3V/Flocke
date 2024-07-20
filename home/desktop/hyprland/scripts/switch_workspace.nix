@@ -13,4 +13,4 @@ pkgs.writeShellScriptBin "switch_workspace" ''${lib.concatImapStringsSep "\n" (i
           fi
       fi
     '')
-    config.home-manager.displays}''
+    config.home-manager.displays.displays}''

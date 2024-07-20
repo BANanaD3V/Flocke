@@ -24,7 +24,7 @@
         (
           m: "${m.name},${m.hyprland}"
         )
-        config.home-manager.displays;
+        config.home-manager.displays.displays;
 
       input = {
         kb_layout = "us,ru";
@@ -199,7 +199,7 @@
         (
           m: map (w: "${toString w},monitor:${m.name}") m.workspaces
         )
-        config.home-manager.displays;
+        config.home-manager.displays.displays;
 
       # Window rules
 
@@ -237,6 +237,7 @@
           "ydotoold"
           "nm-applet"
           "wl-gammarelay-rs"
+          "xrandr --output ${config.home-manager.displays.main} --primary"
           "sleep 2 && waybar"
         ]
         ++ (lib.optionals config.home-manager.bluetooth.enable ["blueman-applet"]);

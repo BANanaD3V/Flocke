@@ -43,7 +43,7 @@
           name = m.name;
           value = m.workspaces;
         })
-        (config.home-manager.displays));
+        (config.home-manager.displays.displays));
 
       on-click = "activate";
       on-scroll-up = "hyprctl dispatch workspace e+1";
@@ -123,7 +123,6 @@
       tooltip = false;
       modules = [
         "pulseaudio"
-        "pulseaudio/slider"
       ];
     };
 
