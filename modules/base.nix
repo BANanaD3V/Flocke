@@ -25,6 +25,10 @@
     device = "nodev";
     efiSupport = true;
     useOSProber = true;
+    extraConfig = "
+      terminal_input console
+      terminal_output console
+    ";
     # theme = inputs.catppuccin-grub + "/src/catppuccin-mocha-grub-theme";
   };
 
