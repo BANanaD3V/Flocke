@@ -5,9 +5,9 @@
   spicetify-nix,
   ...
 }: let
-  spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in {
-  imports = [inputs.spicetify-nix.homeManagerModule];
+  imports = [inputs.spicetify-nix.homeManagerModules.default];
   programs.spicetify = {
     enable = true;
     theme = spicePkgs.themes.text;
@@ -31,6 +31,7 @@ in {
     enabledExtensions = with spicePkgs.extensions; [
       autoSkipVideo
       shuffle
+      beautifulLyrics
       playlistIcons
       seekSong
       adblock
@@ -38,7 +39,7 @@ in {
       loopyLoop
     ];
     enabledCustomApps = with spicePkgs.apps; [
-      lyrics-plus
+      lyricsPlus
     ];
   };
 }

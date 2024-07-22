@@ -3,6 +3,7 @@
     ./catppuccin.nix
     ./biscuit.nix
     ./cuterose.nix
-    ./flexoki.nix
+    ./flexoki-dark.nix
+    ./flexoki-light.nix
   ];
 }
