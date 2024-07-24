@@ -10,7 +10,7 @@
       listenPort = 3000;
       services = [
         {
-          General = [
+          "2_General" = [
             {
               AdGuard = {
                 icon = "adguard-home";
@@ -47,7 +47,7 @@
           ];
         }
         {
-          System = [
+          "1_System" = [
             {
               "System info" = {
                 href = "http://192.168.1.12:61208/";
@@ -55,36 +55,41 @@
                   type = "glances";
                   url = "http://192.168.1.12:61208/";
                   metric = "info";
+                  chart = false;
                 };
               };
             }
             {
-              "CPU Usage" = {
+              "Network" = {
                 href = "http://192.168.1.12:61208/";
                 widget = {
                   type = "glances";
                   url = "http://192.168.1.12:61208/";
-                  metric = "cpu";
+                  metric = "network:enp4s0";
+                  chart = false;
+                };
+              };
+            }
+
+            {
+              "SSD usage" = {
+                href = "http://192.168.1.12:61208/";
+                widget = {
+                  type = "glances";
+                  url = "http://192.168.1.12:61208/";
+                  metric = "fs:/";
+                  chart = false;
                 };
               };
             }
             {
-              "Memory Usage" = {
+              "HDD usage" = {
                 href = "http://192.168.1.12:61208/";
                 widget = {
                   type = "glances";
                   url = "http://192.168.1.12:61208/";
-                  metric = "memory";
-                };
-              };
-            }
-            {
-              "Top Processes" = {
-                href = "http://192.168.1.12:61208/";
-                widget = {
-                  type = "glances";
-                  url = "http://192.168.1.12:61208/";
-                  metric = "process";
+                  metric = "fs:/run/media/hdd";
+                  chart = false;
                 };
               };
             }
@@ -94,6 +99,7 @@
           Management = [
             {
               Scrutiny = {
+                icon = "scrutiny";
                 href = "http://192.168.1.12:8083";
                 description = "Drive health monitoring";
                 widget = {
@@ -103,20 +109,8 @@
               };
             }
             {
-              Portainer = {
-                href = "https://192.168.1.12:9443";
-                ping = "https://192.168.1.12:9443";
-                description = "Container management";
-                widget = {
-                  type = "portainer";
-                  env = 2;
-                  key = "ptr_LZlIJ+qdf7RKs5cnHPxe8iaOgSVOx+arA8Dy7A+ub+A=";
-                  url = "https://192.168.1.12:9443";
-                };
-              };
-            }
-            {
               Glances = {
+                icon = "glances";
                 href = "http://192.168.1.12:61208/";
                 description = "System monitoring";
               };
@@ -133,8 +127,7 @@
             }
             {
               "File Browser" = {
-                href = "http://192.168.1.12:8200";
-                ping = "http://192.168.1.12:8200";
+                href = "http://192.168.1.12:9999";
                 description = "Web based file browser";
               };
             }
@@ -142,11 +135,6 @@
               Jellyfin = {
                 href = "http://192.168.1.12:8096/web/index.html";
                 description = "A media server";
-                widget = {
-                  type = "jellyfin";
-                  url = "http://192.168.1.12:8096";
-                  key = "70874b6f74c2410bb7998aee4f63b995";
-                };
               };
             }
           ];
@@ -155,15 +143,13 @@
           Games = [
             {
               Pufferpanel = {
-                href = "http://192.168.1.12:8090/";
-                ping = "http://192.168.1.12:8090/";
+                href = "http://192.168.1.12:8080/";
                 description = "Hosting panel";
               };
             }
             {
               Bluemap = {
                 href = "http://192.168.1.12:8100/";
-                ping = "http://192.168.1.12:8100/";
                 description = "Server 3D map";
               };
             }
@@ -175,44 +161,44 @@
           openweathermap = "openweathermapapikey";
           weatherapi = "weatherapiapikey";
         };
-        background = "https://raw.githubusercontent.com/BANanaD3V/nixos-config/master/home/desktop/hyprland/wallpapers/paintings.png";
+        background = {
+          image = "https://raw.githubusercontent.com/BANanaD3V/Flocke/master/home/desktop/hyprland/wallpapers/paintings.png";
+          opacity = 60;
+        };
+        cardBlur = "md";
         headerStyle = "clean";
         target = "_self";
-        backgroundOpacity = 0.17;
         title = "Startpage";
         theme = "dark";
+        useEqualHeights = true;
         color = "slate";
         layout = {
-          General = {
+          "1_System" = {
             style = "row";
-            columns = 3;
-          };
-          System = {
-            style = "row";
+            header = false;
             columns = 4;
+          };
+
+          "2_General" = {
+            style = "row";
+            header = false;
+            columns = 3;
           };
         };
       };
       widgets = [
         {
-          glances = {
-            url = "http://192.168.1.12:61208";
-            cpu = true;
-            cputemp = true;
-            memory = true;
+          greeting = {
+            text_size = "4xl";
+            text = "א";
           };
         }
         {
-          resources = {
-            disk = ["/" "/run/media/hdd"];
-          };
-        }
-        {
-          search = {
-            provider = ["custom" "google"];
-            url = "http://192.168.1.12:7666/search?q=";
-            focus = true;
-            target = "_self";
+          openmeteo = {
+            latitude = "55.755826";
+            longitude = "37.6173";
+            units = "metric";
+            cache = 5;
           };
         }
       ];
