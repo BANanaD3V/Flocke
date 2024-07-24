@@ -21,6 +21,7 @@
     ./nginx.nix
     ./speedtest.nix
     ./homepage.nix
+    ./greendale.nix
     ./jellyfin.nix
     ./invidious.nix
     ./pufferpanel.nix

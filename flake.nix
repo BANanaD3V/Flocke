@@ -58,6 +58,8 @@
       url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    greendale.url = "path:/home/banana/servers";
+    #greendale.url = "git+https://github.com/mc-greendale/servers";
   };
 
   outputs = {
