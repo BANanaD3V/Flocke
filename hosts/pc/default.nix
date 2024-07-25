@@ -11,6 +11,7 @@
   services.getty.autologinUser = username;
 
   server.enable = false;
+  # server.greendale.enable = true;
   nixos = {
     nvidia = {
       drivers = {
