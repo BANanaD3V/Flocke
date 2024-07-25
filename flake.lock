@@ -451,14 +451,17 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1721829869,
-        "narHash": "sha256-6lTCemS5y3YuH7waZz+09ic1Iu18BoCRJxyfx8zF+1s=",
-        "path": "/home/banana/servers",
-        "type": "path"
+        "lastModified": 1721933236,
+        "narHash": "sha256-cqmTdVR5fcaKMxcNI9gXKgg1Cz9eDqx8Wdcv8VFCwGE=",
+        "ref": "refs/heads/main",
+        "rev": "923dd12cedfaf36de25517cb2fd5e6c097a38ca9",
+        "revCount": 24,
+        "type": "git",
+        "url": "https://github.com/mc-greendale/servers"
       },
       "original": {
-        "path": "/home/banana/servers",
-        "type": "path"
+        "type": "git",
+        "url": "https://github.com/mc-greendale/servers"
       }
     },
     "hercules-ci-effects": {
