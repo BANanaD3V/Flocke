@@ -4,7 +4,7 @@
     nvidia = {
       drivers = {
         enable = true;
-        version = "production";
+        version = "beta";
       };
       hyprland.enable = false;
     };

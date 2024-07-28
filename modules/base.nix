@@ -14,37 +14,38 @@
     extraGroups = ["wheel" "video" "networkmanager" "adbusers"];
     shell = pkgs.zsh;
   };
-
-  # Bootloader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.kernelModules = ["v4l2loopback"];
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
-  boot.loader.grub = {
-    enable = lib.mkForce true;
-    device = "nodev";
-    efiSupport = true;
-    useOSProber = true;
-    extraConfig = "
+  boot = {
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    # Bootloader.
+    # boot.loader.systemd-boot.enable = true;
+    # boot.kernelModules = ["v4l2loopback"];
+    # boot.extraModulePackages = with config.boot.kernelPackages; [v4l2loopback];
+    loader.grub = {
+      enable = lib.mkForce true;
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
+      extraConfig = "
       terminal_input console
       terminal_output console
     ";
-    # theme = inputs.catppuccin-grub + "/src/catppuccin-mocha-grub-theme";
-  };
+      # theme = inputs.catppuccin-grub + "/src/catppuccin-mocha-grub-theme";
+    };
 
-  boot.loader.efi = {
-    canTouchEfiVariables = true;
-    efiSysMountPoint = "/boot";
-  };
+    loader.efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
 
-  # boot.kernel.sysctl = {
-  #   "vm.max_map_count" = 1048576;
-  # };
+    # boot.kernel.sysctl = {
+    #   "vm.max_map_count" = 1048576;
+    # };
 
-  # Kernel for star citizen
-  boot.kernel.sysctl = lib.mkIf config.hm.home-manager.gaming.star-citizen.enable {
-    "vm.max_map_count" = 16777216;
-    "fs.file-max" = 524288;
+    # Kernel for star citizen
+    kernel.sysctl = lib.mkIf config.hm.home-manager.gaming.star-citizen.enable {
+      "vm.max_map_count" = 16777216;
+      "fs.file-max" = 524288;
+    };
   };
 
   # Fix USB sticks not mounting or being listed:

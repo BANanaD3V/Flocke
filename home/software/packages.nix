@@ -149,7 +149,7 @@
     r2modman
     bottles
     steamcmd
-    heroic
+    # heroic
     gamemode
     lutris
     mangohud
