@@ -10,6 +10,7 @@
     ./nix.nix
     ./hyprland.nix
     ./steam.nix
+    ./byedpi
     ./hardware
     ./server
   ];
