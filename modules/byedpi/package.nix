@@ -95,6 +95,7 @@ in {
 
       requires = ["network.target"];
 
+      wantedBy = ["default.target"];
       serviceConfig = {
         ExecStart = "${byedpi}/bin/ciadpi -ip ${config.services.byedpi.address} -p ${
           toString config.services.byedpi.socksPort
@@ -102,7 +103,6 @@ in {
         Type = "exec";
         PIDFile = "/run/ciadpi.pid";
         ExecReload = "/bin/kill -HUP $MAINPID";
-        WantedBy = "default.target";
         Restart = "always";
         RestartSec = "5s";
       };
