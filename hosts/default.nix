@@ -38,6 +38,7 @@
           inputs.home-manager.nixosModules.home-manager
           inputs.sddm-sugar-candy-nix.nixosModules.default
           inputs.sops-nix.nixosModules.sops
+          inputs.chaotic.nixosModules.default
           {
             home-manager = {
               useGlobalPkgs = true;

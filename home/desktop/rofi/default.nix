@@ -22,7 +22,7 @@ with lib; {
     '';
 
     home.packages = with pkgs; [
-      keepmenu
+      # keepmenu
       rofi-rbw
       rbw
       pinentry

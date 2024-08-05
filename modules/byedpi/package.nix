@@ -65,13 +65,13 @@ in {
     };
 
     commandLine = mkOption {
-      type = types.string;
+      type = types.str;
 
       description = "Command Line";
     };
 
     address = mkOption {
-      type = types.string;
+      type = types.str;
 
       default = "127.0.0.1";
 

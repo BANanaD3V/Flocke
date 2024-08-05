@@ -11,6 +11,7 @@
     ./hyprland.nix
     ./steam.nix
     ./byedpi
+    # ./zapret
     ./hardware
     ./server
   ];

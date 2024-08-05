@@ -15,7 +15,7 @@
     shell = pkgs.zsh;
   };
   boot = {
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    kernelPackages = pkgs.linuxPackages_cachyos-hardened;
     # Bootloader.
     # boot.loader.systemd-boot.enable = true;
     # boot.kernelModules = ["v4l2loopback"];
@@ -171,7 +171,7 @@
   environment.systemPackages = with pkgs; [
     nh
     virt-manager
-    gnome.gnome-disk-utility
+    gnome-disk-utility
     gutenprint
     git
     btrfs-progs

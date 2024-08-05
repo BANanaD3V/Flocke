@@ -59,8 +59,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # greendale.url = "path:/home/banana/servers";
-    # greendale.url = "git+https://github.com/mc-greendale/servers";
-    greendale.url = "git+ssh://git@github.com/mc-greendale/servers";
+    greendale.url = "git+https://github.com/mc-greendale/servers";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    # greendale.url = "git+ssh://git@github.com/mc-greendale/servers";
   };
 
   outputs = {
