@@ -71,7 +71,7 @@
   } @ inputs: let
     username = "banana";
     userfullname = "Nikita";
-    useremail = "bananadev@skiff.com";
+    useremail = "banana@banana.is-cool.dev";
 
     system = "x86_64-linux";
 
