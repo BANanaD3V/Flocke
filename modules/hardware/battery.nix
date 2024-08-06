@@ -13,20 +13,20 @@
     services.system76-scheduler.settings.cfsProfiles.enable = true;
 
     # Auto cpu frequency
-    programs.auto-cpufreq = {
-      enable = true;
-      settings = {
-        charger = {
-          governor = "performance";
-          turbo = "auto";
-        };
-
-        battery = {
-          governor = "powersave";
-          turbo = "auto";
-        };
-      };
-    };
+    # programs.auto-cpufreq = {
+    #   enable = true;
+    #   settings = {
+    #     charger = {
+    #       governor = "performance";
+    #       turbo = "auto";
+    #     };
+    #
+    #     battery = {
+    #       governor = "powersave";
+    #       turbo = "auto";
+    #     };
+    #   };
+    # };
 
     # Enable TLP (better than gnomes internal power manager)
     # services.tlp = {
