@@ -15,7 +15,7 @@
     shell = pkgs.zsh;
   };
   boot = {
-    kernelPackages = pkgs.linuxPackages_cachyos-hardened;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
     # Bootloader.
     # boot.loader.systemd-boot.enable = true;
     # boot.kernelModules = ["v4l2loopback"];
