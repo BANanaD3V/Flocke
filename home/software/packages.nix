@@ -65,6 +65,10 @@
     element-desktop
     # signal-desktop
     (signal-desktop-beta.overrideAttrs {
+      postFixup = ''
+        wrapProgram $out/bin/signal-desktop-beta \
+          --run 'export HTTP_PROXY=socks://127.0.0.1:1081 HTTPS_PROXY=socks://127.0.0.1:1081'
+      '';
       desktopItems = [
         (makeDesktopItem {
           name = "signal";
