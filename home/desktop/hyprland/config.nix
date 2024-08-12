@@ -204,6 +204,7 @@
       # Window rules
 
       windowrulev2 = [
+        "workspace 8, class:(signalbeta)"
         "workspace 7, class:(vesktop)"
         "workspace 6, class:(org.telegram.desktop)"
         "workspace 2, class:(firefox)"
