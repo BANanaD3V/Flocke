@@ -146,7 +146,7 @@
     # 3D modeling and printing
     # blender
     # cura
-    flashprint
+    # flashprint
 
     # Gaming
     r2modman
@@ -158,6 +158,7 @@
     mangohud
     gamescope
     prismlauncher
+    # (prismlauncher.override {withWaylandGLFW = true;})
     blockbench
     # inputs.getchoo.packages.${pkgs.system}.modrinth-app
     wine-staging
