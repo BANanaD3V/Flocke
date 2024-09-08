@@ -38,7 +38,7 @@
     krita
     gimp
     nautilus
-    gnome.gnome-boxes
+    gnome-boxes
     kvmtool
     hyprpaper
     inputs.nixpkgs-wayland.packages.${pkgs.system}.swww
