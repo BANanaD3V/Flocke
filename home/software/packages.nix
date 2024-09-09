@@ -38,7 +38,7 @@
     krita
     gimp
     nautilus
-    gnome.gnome-boxes
+    gnome-boxes
     kvmtool
     hyprpaper
     inputs.nixpkgs-wayland.packages.${pkgs.system}.swww
@@ -146,7 +146,7 @@
     # 3D modeling and printing
     # blender
     # cura
-    flashprint
+    # flashprint
 
     # Gaming
     r2modman
@@ -158,6 +158,7 @@
     mangohud
     gamescope
     prismlauncher
+    # (prismlauncher.override {withWaylandGLFW = true;})
     blockbench
     # inputs.getchoo.packages.${pkgs.system}.modrinth-app
     wine-staging
