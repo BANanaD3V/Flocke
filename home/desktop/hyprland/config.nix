@@ -228,21 +228,20 @@
 
       # Autostart
 
-      exec-once =
-        [
-          "hyprpaper"
-          "wl-paste --type text --watch cliphist store"
-          "wl-paste --type image --watch cliphist store"
-          "xwaylandvideobridge"
-          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
-          "swaync"
-          "ydotoold"
-          "nm-applet"
-          "wl-gammarelay-rs"
-          "xrandr --output ${config.home-manager.displays.main} --primary"
-          "sleep 2 && waybar"
-        ]
-        ++ (lib.optionals config.home-manager.bluetooth.enable ["blueman-applet"]);
+      exec-once = [
+        "hyprpaper"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
+        "xwaylandvideobridge"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
+        "swaync"
+        "ydotoold"
+        "nm-applet"
+        "wl-gammarelay-rs"
+        "xrandr --output ${config.home-manager.displays.main} --primary"
+        "sleep 2 && waybar"
+      ];
+      # ++ (lib.optionals config.home-manager.bluetooth.enable ["blueman-applet"]);
       debug = {
         disable_scale_checks = true;
       };

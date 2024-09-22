@@ -27,7 +27,7 @@
     # Desktop stuff
     mpd
     mpdevil
-
+    feishin
     ncmpcpp
     mpc-cli
     freetube
@@ -127,6 +127,7 @@
     direnv
     vscode
     jetbrains.idea-community
+    android-studio
     # (pkgs.vscode.overrideAttrs (o: let
     #   version = "1.81.1";
     #   plat = "linux-x64";
