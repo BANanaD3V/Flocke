@@ -104,7 +104,7 @@
     commitizen
     python3
     # insomnia
-    # godot_4
+    godot_4-mono
     nodejs_20
     bun
     nodePackages.pnpm
@@ -153,7 +153,7 @@
     r2modman
     bottles
     steamcmd
-    # heroic
+    heroic
     gamemode
     lutris
     mangohud
