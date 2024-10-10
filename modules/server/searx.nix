@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -7,6 +8,20 @@
   config = lib.mkIf config.server.searx.enable {
     services.searx = {
       enable = true;
+      package = pkgs.searxng.overrideAttrs (old: {
+        src = pkgs.fetchFromGitHub {
+          owner = "privau";
+          repo = "searxng-favicon";
+          rev = "1341bd709db7dbb87a10fbfde43d8d0336f08655";
+          hash = "sha256-5OEzetN0fyifs7fSCNDAm3OxUBavKEEEEhkYFe9drz8=";
+        };
+        propagatedBuildInputs = with pkgs.python3.pkgs;
+          [
+            pydantic
+            typer
+          ]
+          ++ old.propagatedBuildInputs;
+      });
       settings = {
         server = {
           port = 7666;
@@ -18,6 +33,7 @@
         };
         search = {
           safe_search = 0;
+          favicon_resolver = "duckduckgo";
           autocomplete = "duckduckgo";
         };
         ui = {
@@ -33,8 +49,8 @@
           "Autodetect search language"
         ];
         hostname_replace = {
-          "(.*\.)?youtube\.com$" = "invidious.banana.is-cool.dev";
-          "(.*\.)?youtu\.be$" = "invidious.banana.is-cool.dev";
+          # "(.*\.)?youtube\.com$" = "invidious.banana.is-cool.dev";
+          # "(.*\.)?youtu\.be$" = "invidious.banana.is-cool.dev";
         };
         engines = [
           {

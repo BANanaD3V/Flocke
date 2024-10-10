@@ -424,11 +424,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1721824511,
-        "narHash": "sha256-+YNRVzvZeA2K93f2GsqkL3ik+NzB6kw9cXBU9AH9uug=",
+        "lastModified": 1722153922,
+        "narHash": "sha256-fthMjFVXDy/a1OY+6TAPvDCT4FFjtBppNOks79Wd46E=",
         "owner": "BANanaD3V",
         "repo": "flux",
-        "rev": "001b53315048562437dd10e295c9b273dc1e894a",
+        "rev": "1f5dc6df24624c35ece20112ef523040ee793daa",
         "type": "github"
       },
       "original": {
@@ -499,11 +499,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1724067760,
-        "narHash": "sha256-5F5I4Ojk8+ZLn2wZ6AKfbuCCY+X+W1cjGTGTz6E1TdQ=",
+        "lastModified": 1728544398,
+        "narHash": "sha256-EXNhrOBA36Tua2Q4t82eA4x2uhYqmMNwxYWH3FFmQ8s=",
         "ref": "refs/heads/main",
-        "rev": "0be6734964cf0f48a819ad93b28649690c7c67a1",
-        "revCount": 40,
+        "rev": "81126e2c7bc7affd026b93580c4e9b44c06870e3",
+        "revCount": 42,
         "type": "git",
         "url": "https://github.com/mc-greendale/servers"
       },
@@ -1028,11 +1028,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1720957393,
-        "narHash": "sha256-oedh2RwpjEa+TNxhg5Je9Ch6d3W1NKi7DbRO1ziHemA=",
+        "lastModified": 1723991338,
+        "narHash": "sha256-Grh5PF0+gootJfOJFenTTxDTYPidA3V28dqJ/WV7iis=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "693bc46d169f5af9c992095736e82c3488bf7dbb",
+        "rev": "8a3354191c0d7144db9756a74755672387b702ba",
         "type": "github"
       },
       "original": {
