@@ -1074,6 +1074,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_8": {
+      "locked": {
+        "lastModified": 1716044191,
+        "narHash": "sha256-V/JRCf9iOKGMmmMCs/K1n+vOP01Y7ZPJntHXxDEvzWM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "fdfdc52e33e11634eb7b37f65e96e63d1beb7e45",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -1140,7 +1156,8 @@
         "schizofox": "schizofox",
         "sddm-sugar-candy-nix": "sddm-sugar-candy-nix",
         "sops-nix": "sops-nix",
-        "spicetify-nix": "spicetify-nix"
+        "spicetify-nix": "spicetify-nix",
+        "zapret": "zapret"
       }
     },
     "rust-analyzer-src": {
@@ -1383,6 +1400,41 @@
         "submodules": true,
         "type": "git",
         "url": "https://github.com/Open-Wine-Components/umu-launcher/?dir=packaging/nix"
+      }
+    },
+    "zapret": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_8",
+        "zapret-src": "zapret-src"
+      },
+      "locked": {
+        "lastModified": 1724497256,
+        "narHash": "sha256-wLOTVuN2d8tHAe69Dq4oAbOEyuIAAlNcdB0fmud+LSo=",
+        "owner": "aca",
+        "repo": "zapret-flake.nix",
+        "rev": "a713abab46b70dd198130ad3759baf0b7af48b2c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aca",
+        "repo": "zapret-flake.nix",
+        "type": "github"
+      }
+    },
+    "zapret-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1724486371,
+        "narHash": "sha256-wnjRnUhdPBHrrk+LwhEbmKm1OyfwcLCbf2H4morw5vY=",
+        "owner": "bol-van",
+        "repo": "zapret",
+        "rev": "faea968cd4ab24887236051ad4bcbbd0a824c734",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bol-van",
+        "repo": "zapret",
+        "type": "github"
       }
     }
   },
