@@ -40,7 +40,6 @@
           inputs.sddm-sugar-candy-nix.nixosModules.default
           inputs.sops-nix.nixosModules.sops
           inputs.chaotic.nixosModules.default
-          inputs.nix-citizen.nixosModules.StarCitizen
           {
             home-manager = {
               useGlobalPkgs = true;
