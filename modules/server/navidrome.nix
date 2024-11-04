@@ -14,6 +14,7 @@
         "Scanner.GroupAlbumReleases" = true;
         "CoverArtPriority" = "cover.*, folder.*, front.*, external, embedded";
         "LastFM.Enabled" = false;
+        "EnableSharing" = true;
       };
     };
   };

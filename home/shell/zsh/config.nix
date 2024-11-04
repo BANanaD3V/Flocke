@@ -9,6 +9,7 @@
       ls = "eza --icons";
       cat = "bat";
       v = "nvim";
+      cd = "z";
       vim = "nvim";
     };
 
@@ -33,8 +34,8 @@
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;5D" backward-word
 
-      # Eval thefuck
-      # eval $(thefuck --alias)
+      # Eval zoxide
+      eval "$(zoxide init zsh)"
 
       # Source starship
       source <(starship init zsh --print-full-init)

@@ -28,7 +28,7 @@
         core.name   = pipewire-0        # core name and socket name
 
         ## Properties for the DSP configuration.
-        default.clock.rate          = 48000
+        default.clock.rate          = 192000
         #default.clock.allowed-rates = [ 48000 ]
         default.clock.quantum       = 1024
         default.clock.min-quantum   = 32

@@ -55,9 +55,6 @@ in {
         amdgpuBusId = "PCI:04:0:0";
       };
     };
-    environment.sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-    };
 
     environment.variables = lib.mkIf config.nixos.nvidia.hyprland.enable {
       GBM_BACKEND = "nvidia-drm";

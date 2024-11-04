@@ -13,12 +13,13 @@
   server.enable = false;
   # server.greendale.enable = true;
   nixos = {
+    amdgpu.enable = true;
     nvidia = {
       drivers = {
         version = "beta";
-        enable = true;
+        enable = false;
       };
-      hyprland.enable = true;
+      hyprland.enable = false;
     };
     drives = [
       {

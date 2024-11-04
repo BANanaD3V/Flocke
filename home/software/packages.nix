@@ -14,6 +14,7 @@
     ripgrep
     jq
     eza
+    zoxide
     fzf
     bat
     cava
@@ -104,7 +105,7 @@
     commitizen
     python3
     # insomnia
-    # godot_4
+    godot_4-mono
     nodejs_20
     bun
     nodePackages.pnpm
@@ -121,8 +122,9 @@
     docker-compose
     distrobox
     # libglibutil
-    # glib
-    # glibc
+    glib
+    libunwind
+    glibc
     # figma-linux
     direnv
     vscode
@@ -153,7 +155,7 @@
     r2modman
     bottles
     steamcmd
-    # heroic
+    heroic
     gamemode
     lutris
     mangohud
@@ -162,17 +164,24 @@
     # (prismlauncher.override {withWaylandGLFW = true;})
     blockbench
     # inputs.getchoo.packages.${pkgs.system}.modrinth-app
-    wine-staging
+    wineWowPackages.stable
     winetricks
     # inputs.game-rs.packages.x86_64-linux.default
-    # inputs.nix-gaming.packages.${pkgs.system}.star-citizen
+    # (inputs.nix-gaming.packages.${pkgs.system}.star-citizen.override {
+    #   gameScopeEnable = true;
+    #   gameScopeArgs = [
+    #     "-W 3440"
+    #     "-H 1440"
+    #     "-b"
+    #   ];
+    # })
 
     # Sound
     pipewire
     # soundux
     lyrebird
     wireplumber
-    alsaLib
+    alsa-lib
     pamixer
     playerctl
     wev

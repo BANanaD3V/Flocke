@@ -36,6 +36,7 @@
           ../pkgs
           ../options/nixos
           inputs.home-manager.nixosModules.home-manager
+          inputs.zapret.nixosModules.zapret
           inputs.sddm-sugar-candy-nix.nixosModules.default
           inputs.sops-nix.nixosModules.sops
           inputs.chaotic.nixosModules.default

@@ -4,6 +4,9 @@
   ...
 }: {
   options.nixos = {
+    amdgpu = {
+      enable = lib.mkEnableOption "AMD gpu";
+    };
     nvidia = {
       drivers = {
         enable = lib.mkEnableOption "Nvidia drivers";

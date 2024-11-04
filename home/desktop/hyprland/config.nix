@@ -224,6 +224,7 @@
       layerrule = [
         "blur, waybar"
         "blur, kitty"
+        "dimaround, rofi"
       ];
 
       # Autostart

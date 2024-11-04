@@ -4,7 +4,7 @@
   config,
   ...
 }: let
-  package = "nextcloud29";
+  package = "nextcloud30";
 in {
   options.server.nextcloud.enable = lib.mkEnableOption "Enable nextcloud" // {default = config.server.enable;};
   config = lib.mkIf config.server.nextcloud.enable {

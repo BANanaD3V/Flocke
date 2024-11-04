@@ -12,7 +12,6 @@
   # };
   #
   nixos = {};
-  server."0x0".enable = false;
 
   users.users.banana.openssh.authorizedKeys.keys = [
     # change this to your ssh key

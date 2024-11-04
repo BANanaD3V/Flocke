@@ -22,6 +22,7 @@
 in {
   # Nix
   nix = {
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     # package = lib.mkIf (host != "server") pkgs.nixVersions.latest;
     settings = {
       experimental-features = ["nix-command" "flakes"];

@@ -6,7 +6,7 @@
       address = "127.0.0.1";
       socksPort = 1081;
       commandLine = ''
-        --split 1 --oob 1 mod-http=h,d --auto none --fake -1 --tlsrec 3+h
+        -s1 -q1 -f-1 -S -b1000 -As
       '';
     };
   };
