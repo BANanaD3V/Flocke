@@ -181,7 +181,7 @@
     # soundux
     lyrebird
     wireplumber
-    alsaLib
+    alsa-lib
     pamixer
     playerctl
     wev

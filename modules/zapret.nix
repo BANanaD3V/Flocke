@@ -1,4 +1,5 @@
 {inputs, ...}: {
+  disabledModules = ["services/networking/zapret.nix"];
   services.zapret.enable = true;
   services.zapret.config = ''
         FWTYPE=nftables
