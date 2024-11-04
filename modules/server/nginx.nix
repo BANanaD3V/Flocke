@@ -8,6 +8,7 @@
   config = lib.mkIf config.server.nginx.enable {
     services.nginx = {
       enable = true;
+      proxyTimeout = "600s";
       clientMaxBodySize = "512M";
       recommendedTlsSettings = true;
       recommendedZstdSettings = true;
@@ -16,6 +17,14 @@
       recommendedProxySettings = true;
       recommendedBrotliSettings = true;
       virtualHosts = {
+        "syncthing.banana.is-cool.dev" = {
+          addSSL = true;
+          enableACME = true;
+          kTLS = true;
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:8384";
+          };
+        };
         "invidious.banana.is-cool.dev" = {
           addSSL = true;
           enableACME = true;
