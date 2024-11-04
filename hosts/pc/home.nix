@@ -3,10 +3,10 @@
     graphical.enable = true;
     colorscheme = "catppuccin";
     displays = {
-      main = "DP-3";
+      main = "DP-2";
       displays = [
         {
-          name = "DP-3";
+          name = "DP-2";
           hyprland = "3440x1440@165,0x0,1.25";
           workspaces = [1 2 3 4 5 6 7 8 9 10];
         }

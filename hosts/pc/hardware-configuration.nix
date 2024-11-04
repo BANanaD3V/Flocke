@@ -7,6 +7,9 @@
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
+swapDevices =
+    [ { device = "/dev/disk/by-label/NIXOS-SWAP"; }
+    ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];

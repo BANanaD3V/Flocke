@@ -15,7 +15,7 @@
     shell = pkgs.zsh;
   };
   boot = {
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    kernelPackages = pkgs.linuxPackages_zen;
     # Bootloader.
     # boot.loader.systemd-boot.enable = true;
     # boot.kernelModules = ["v4l2loopback"];
@@ -48,6 +48,10 @@
     };
   };
 
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
+
   # Fix USB sticks not mounting or being listed:
   services.devmon.enable = true;
   services.udisks2.enable = true;
@@ -68,15 +72,18 @@
     powerOnBoot = true;
   };
 
+  # Corectrl
+  programs.corectrl.enable = true;
+
   # Adb
   programs.adb.enable = true;
-
+  # Podman
+  virtualisation.podman.enable = true;
   # Networking
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
-    firewall.enable = true;
-    extraHosts = lib.mkIf config.hm.home-manager.gaming.star-citizen.enable "127.0.0.1 modules-cdn.eac-prod.on.epicgames.com";
+    firewall.enable = false;
   };
   services.blueman.enable = config.hm.home-manager.bluetooth.enable;
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -119,7 +126,7 @@
     enable = true;
     drivers = [pkgs.epson-escpr];
   };
-
+  security.polkit.enable = true;
   # Flatpak
   services.flatpak.enable = true;
 

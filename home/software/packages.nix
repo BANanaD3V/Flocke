@@ -14,6 +14,7 @@
     ripgrep
     jq
     eza
+    zoxide
     fzf
     bat
     cava
@@ -121,8 +122,9 @@
     docker-compose
     distrobox
     # libglibutil
-    # glib
-    # glibc
+    glib
+    libunwind
+    glibc
     # figma-linux
     direnv
     vscode
@@ -162,10 +164,17 @@
     # (prismlauncher.override {withWaylandGLFW = true;})
     blockbench
     # inputs.getchoo.packages.${pkgs.system}.modrinth-app
-    wine-staging
+    wineWowPackages.stable
     winetricks
     # inputs.game-rs.packages.x86_64-linux.default
-    # inputs.nix-gaming.packages.${pkgs.system}.star-citizen
+    # (inputs.nix-gaming.packages.${pkgs.system}.star-citizen.override {
+    #   gameScopeEnable = true;
+    #   gameScopeArgs = [
+    #     "-W 3440"
+    #     "-H 1440"
+    #     "-b"
+    #   ];
+    # })
 
     # Sound
     pipewire

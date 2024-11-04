@@ -22,6 +22,7 @@
 in {
   # Nix
   nix = {
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     # package = lib.mkIf (host != "server") pkgs.nixVersions.latest;
     settings = {
       experimental-features = ["nix-command" "flakes"];
@@ -31,6 +32,7 @@ in {
         "https://nixpkgs-wayland.cachix.org"
         "https://getchoo.cachix.org"
         "https://game-rs.cachix.org"
+        "https://nix-citizen.cachix.org"
       ];
       trusted-public-keys = [
         "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
@@ -38,6 +40,7 @@ in {
         "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
         "getchoo.cachix.org-1:ftdbAUJVNaFonM0obRGgR5+nUmdLMM+AOvDOSx0z5tE="
         "game-rs.cachix.org-1:fsu+ijfA2GCUE2QX0af80D7x9PCZS79EZbqwtOtlIhA="
+        "nix-citizen.cachix.org-1:lPMkWc2X8XD4/7YPEEwXKKBg+SVbYTVrAaLA2wQTKCo="
       ];
     };
   };
