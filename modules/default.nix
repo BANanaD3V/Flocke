@@ -11,8 +11,7 @@
     ./hyprland.nix
     ./steam.nix
     ./byedpi
-    ./syncthing.nix
-    # ./zapret
+    ./zapret.nix
     ./hardware
     ./server
   ];

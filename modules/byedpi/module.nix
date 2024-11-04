@@ -6,7 +6,7 @@
       address = "127.0.0.1";
       socksPort = 1081;
       commandLine = ''
-        --oob 1 -A t
+        -s1 -q1 -f-1 -S -b1000 -As
       '';
     };
   };
