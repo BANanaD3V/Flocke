@@ -12,6 +12,7 @@
     ./steam.nix
     ./byedpi
     ./zapret.nix
+    ./syncthing.nix
     ./hardware
     ./server
   ];
