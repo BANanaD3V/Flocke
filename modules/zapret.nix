@@ -1,6 +1,10 @@
-{inputs, ...}: {
+{
+  lib,
+  host,
+  ...
+}: {
   disabledModules = ["services/networking/zapret.nix"];
-  services.zapret.enable = true;
+  services.zapret.enable = host != "server";
   services.zapret.config = ''
         FWTYPE=nftables
         MODE=nfqws
