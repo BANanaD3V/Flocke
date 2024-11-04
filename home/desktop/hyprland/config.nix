@@ -226,7 +226,12 @@
         "blur, kitty"
         "dimaround, rofi"
       ];
+      # Env
 
+      env = [
+        "HYPRCURSOR_SIZE,${toString config.home.pointerCursor.size}"
+        "HYPRCURSOR_THEME,${config.home.pointerCursor.name}"
+      ];
       # Autostart
 
       exec-once = [
@@ -240,6 +245,7 @@
         "nm-applet"
         "wl-gammarelay-rs"
         "xrandr --output ${config.home-manager.displays.main} --primary"
+        "hyprctl setcursor ${config.home.pointerCursor.name} ${toString config.home.pointerCursor.size}"
         "sleep 2 && waybar"
       ];
       # ++ (lib.optionals config.home-manager.bluetooth.enable ["blueman-applet"]);

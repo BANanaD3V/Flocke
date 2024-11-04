@@ -121,6 +121,7 @@
   # Printing support
   services.printing = {
     enable = true;
+    openFirewall = true;
     drivers = [pkgs.epson-escpr];
   };
   security.polkit.enable = true;

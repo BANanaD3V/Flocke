@@ -28,7 +28,7 @@
 
     # Xresources
     xresources.properties = {
-      "Xcursor.size" = 24;
+      "Xcursor.size" = config.home.pointerCursor.size;
       "Xft.antialias" = 1;
       "Xft.hinting" = 1;
       "Xft.hintstyle" = "hintslight";
