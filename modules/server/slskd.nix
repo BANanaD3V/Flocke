@@ -6,7 +6,7 @@
   options.server.slskd.enable = lib.mkEnableOption "Enable slskd" // {default = config.server.enable;};
   config = lib.mkIf config.server.slskd.enable {
     services.slskd = {
-      enable = true;
+      enable = false;
       domain = null;
       environmentFile = config.sops.secrets."soulseek.env".path;
       # openFirewall = true;

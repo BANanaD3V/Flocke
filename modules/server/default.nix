@@ -10,6 +10,7 @@
     ./navidrome.nix
     ./searx.nix
     ./nextcloud.nix
+    ./immich.nix
     ./scrutiny.nix
     ./0x0.nix
     ./slskd.nix

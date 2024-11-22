@@ -17,6 +17,14 @@
       recommendedProxySettings = true;
       recommendedBrotliSettings = true;
       virtualHosts = {
+        "immich.banana.is-cool.dev" = {
+          addSSL = true;
+          enableACME = true;
+          kTLS = true;
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:2283";
+          };
+        };
         "syncthing.banana.is-cool.dev" = {
           addSSL = true;
           enableACME = true;
