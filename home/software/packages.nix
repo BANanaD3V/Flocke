@@ -94,6 +94,15 @@
     obsidian
     nicotine-plus
     beets
+    (streamrip.overrideAttrs
+      (old: {
+        src = fetchFromGitHub {
+          owner = "mortalis13";
+          repo = "streamrip";
+          rev = "3ebbdad19362d942af47e71562eda1416a1816c7";
+          sha256 = "sha256-Zh8VDlTrLEHMNK/5KEDcXV34dgofsmC9nnFw/AVRJKA=";
+        };
+      }))
 
     # Development
     cargo
@@ -105,7 +114,7 @@
     commitizen
     python3
     # insomnia
-    godot_4-mono
+    godot_4
     nodejs_20
     bun
     nodePackages.pnpm

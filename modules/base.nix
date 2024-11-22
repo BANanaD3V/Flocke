@@ -41,7 +41,7 @@
     kernel.sysctl = {
       "vm.max_map_count" = 16777216;
       "fs.file-max" = 524288;
-      "fs.inotify.max_user_watches" = 204800;
+      "fs.inotify.max_user_watches" = 2147483647;
     };
   };
 
