@@ -156,7 +156,6 @@
     bottles
     steamcmd
     heroic
-    gamemode
     lutris
     mangohud
     gamescope
