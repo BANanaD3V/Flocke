@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   home = {
     packages = with pkgs; [
       dconf
@@ -10,7 +14,7 @@
     pointerCursor = {
       name = "catppuccin-mocha-peach-cursors";
       package = pkgs.catppuccin-cursors.mochaPeach;
-      size = 24;
+      size = 20;
       gtk.enable = true;
       x11.enable = true;
     };
@@ -48,6 +52,7 @@
   };
 
   home.sessionVariables = {
+    XCURSOR_SIZE = config.home.pointerCursor.size;
     GTK_THEME = "catppuccin-mocha-lavender-standard";
   };
 
