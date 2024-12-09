@@ -176,6 +176,7 @@
   # Env packages
   environment.systemPackages = with pkgs; [
     nh
+    libsecret
     virt-manager
     gnome-disk-utility
     gutenprint

@@ -3,7 +3,7 @@
     graphical.enable = true;
     colorscheme = "catppuccin";
     displays = {
-      main = "DP-2";
+      main = "DP-1";
       displays = [
         {
           name = "DP-1";
