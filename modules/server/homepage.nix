@@ -1,12 +1,14 @@
 {
   lib,
   config,
+  pkgsStable,
   ...
 }: {
   options.server.homepage.enable = lib.mkEnableOption "Enable homepage" // {default = config.server.enable;};
   config = lib.mkIf config.server.homepage.enable {
     services.homepage-dashboard = {
       enable = true;
+      package = pkgsStable.homepage-dashboard;
       listenPort = 3000;
       services = [
         {

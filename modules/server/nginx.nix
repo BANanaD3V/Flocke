@@ -17,6 +17,15 @@
       recommendedProxySettings = true;
       recommendedBrotliSettings = true;
       virtualHosts = {
+        "forgejo.banana.is-cool.dev" = {
+          addSSL = true;
+          enableACME = true;
+          kTLS = true;
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:3333";
+          };
+        };
+
         "immich.banana.is-cool.dev" = {
           addSSL = true;
           enableACME = true;
@@ -53,6 +62,22 @@
           enableACME = true;
           locations."/" = {
             proxyPass = "http://127.0.0.1:5555";
+          };
+        };
+
+        "gonic.banana.is-cool.dev" = {
+          addSSL = true;
+          enableACME = true;
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:4747";
+          };
+        };
+
+        "nghe.banana.is-cool.dev" = {
+          addSSL = true;
+          enableACME = true;
+          locations."/" = {
+            proxyPass = "http://127.0.0.1:4444";
           };
         };
 

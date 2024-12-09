@@ -16,6 +16,7 @@
     ./slskd.nix
     ./postgres.nix
     ./transmission.nix
+    ./forgejo.nix
     ./adguard.nix
     ./glances.nix
     # ./caddy.nix

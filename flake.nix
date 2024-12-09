@@ -2,7 +2,8 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?rev=807e9154dcb16384b1b765ebe9cd2bba2ac287fd";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs/master";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
 
     home-manager = {
@@ -58,7 +59,7 @@
       url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # greendale.url = "path:/home/banana/servers";
+    #greendale.url = "path:/home/banana/servers";
     greendale.url = "git+https://github.com/mc-greendale/servers";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     zapret.url = "github:aca/zapret-flake.nix";

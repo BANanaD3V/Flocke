@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgsMaster,
   inputs,
   ...
 }: {
@@ -17,7 +18,7 @@
     zoxide
     fzf
     bat
-    cava
+    # cava
     feh
     # thefuck
     unrar
@@ -65,24 +66,24 @@
     chromium
     element-desktop
     # signal-desktop
-    (signal-desktop-beta.overrideAttrs {
-      postFixup = ''
-        wrapProgram $out/bin/signal-desktop-beta \
-          --run 'export HTTP_PROXY=socks://127.0.0.1:1081 HTTPS_PROXY=socks://127.0.0.1:1081'
-      '';
-      desktopItems = [
-        (makeDesktopItem {
-          name = "signal";
-          desktopName = "Signal";
-          exec = "signal-desktop-beta --disable-gpu %U";
-          icon = "signal";
-          startupWMClass = "Signal Beta";
-          genericName = "Internet Messenger";
-          keywords = ["call" "signal" "electron" "chat"];
-          categories = ["Network" "InstantMessaging" "Chat"];
-        })
-      ];
-    })
+    # (signal-desktop.overrideAttrs {
+    #   postFixup = ''
+    #     wrapProgram $out/bin/signal-desktop-beta \
+    #       --run 'export HTTP_PROXY=socks://127.0.0.1:1081 HTTPS_PROXY=socks://127.0.0.1:1081'
+    #   '';
+    #   desktopItems = [
+    #     (makeDesktopItem {
+    #       name = "signal";
+    #       desktopName = "Signal";
+    #       exec = "signal-desktop --disable-gpu %U";
+    #       icon = "signal";
+    #       startupWMClass = "Signal Beta";
+    #       genericName = "Internet Messenger";
+    #       keywords = ["call" "signal" "electron" "chat"];
+    #       categories = ["Network" "InstantMessaging" "Chat"];
+    #     })
+    #   ];
+    # })
     # cinny-desktop
     telegram-desktop
     zoom-us
@@ -90,7 +91,6 @@
     mpv
     libreoffice
     zathura
-    todoist-electron
     obsidian
     nicotine-plus
     beets
@@ -113,6 +113,7 @@
     texliveFull
     commitizen
     python3
+    go
     # insomnia
     godot_4
     nodejs_20
