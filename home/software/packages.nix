@@ -6,6 +6,7 @@
 }: {
   home.packages = with pkgs; [
     # Archives
+    libsecret
     zip
     xz
     unzip
@@ -125,6 +126,8 @@
     # zlib
     # gnumake
     gh
+    tea
+    git-credential-oauth
     icu74
     jdk17
     filezilla
@@ -136,7 +139,6 @@
     libunwind
     glibc
     # figma-linux
-    direnv
     vscode
     jetbrains.idea-community
     android-studio
@@ -166,7 +168,6 @@
     bottles
     steamcmd
     heroic
-    gamemode
     lutris
     mangohud
     gamescope

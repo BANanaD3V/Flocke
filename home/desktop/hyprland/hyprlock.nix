@@ -49,9 +49,9 @@ in {
           color = rgb(${base05})
           font_size = 64
           font_family = JetBrains Mono Nerd Font 10
-          position = 0, 16
+          position = 0, 160
           halign = center
-          valign = center
+          valign = top
       }
 
 

@@ -52,7 +52,7 @@
   };
 
   home.sessionVariables = {
-    XCURSOR_SIZE = config.home.pointerCursor.size;
+    XCURSOR_SIZE = config.home.pointerCursor.size + 4;
     GTK_THEME = "catppuccin-mocha-lavender-standard";
   };
 

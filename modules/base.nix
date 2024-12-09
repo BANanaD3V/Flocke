@@ -80,7 +80,7 @@
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
-    firewall.enable = false;
+    firewall.enable = lib.mkForce false;
   };
   services.blueman.enable = config.hm.home-manager.bluetooth.enable;
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -121,8 +121,9 @@
   # Printing support
   services.printing = {
     enable = true;
+    browsed.enable = false;
     openFirewall = true;
-    drivers = [pkgs.epson-escpr];
+    drivers = [pkgs.epson-escpr2 pkgs.epson-escpr];
   };
   security.polkit.enable = true;
   # Flatpak
@@ -175,6 +176,7 @@
   # Env packages
   environment.systemPackages = with pkgs; [
     nh
+    libsecret
     virt-manager
     gnome-disk-utility
     gutenprint

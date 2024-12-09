@@ -2,6 +2,7 @@
   programs.kitty = with config.colorScheme.palette; {
     enable = config.home-manager.kitty.enable;
     settings = {
+      cursor_trail = 3;
       scrollback_lines = 10000;
       update_check_interval = 0;
       confirm_os_window_close = 0;
