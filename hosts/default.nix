@@ -12,10 +12,6 @@
       inherit system;
       config.allowUnfree = true;
     };
-    pkgsMaster = import inputs.nixpkgs-master {
-      inherit system;
-      config.allowUnfree = true;
-    };
 
     extraSpecialArgs = {
       inherit inputs host isNixOS username useremail pkgsStable pkgsMaster;
