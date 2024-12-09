@@ -900,22 +900,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-master": {
-      "locked": {
-        "lastModified": 1733758725,
-        "narHash": "sha256-2swefXrg+9Xl4LdOm0xRXfMgfYYPCDMJRU/fffe7aew=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "f05e64a83f7bb9331de58bcbb9fe08be4306ad80",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "master",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1733384649,
@@ -1128,7 +1112,6 @@
         "nix-gaming": "nix-gaming",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_6",
-        "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-wayland": "nixpkgs-wayland",
         "schizofox": "schizofox",

@@ -80,7 +80,8 @@
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
-    firewall.enable = lib.mkForce false;
+    nftables.enable = true;
+    firewall.enable = false;
   };
   services.blueman.enable = config.hm.home-manager.bluetooth.enable;
   systemd.services.NetworkManager-wait-online.enable = false;
