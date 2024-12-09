@@ -147,7 +147,7 @@
     # ngrok
 
     # 3D modeling and printing
-    # blender
+    blender
     # cura
     # flashprint
 

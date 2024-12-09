@@ -80,6 +80,7 @@
   networking = {
     hostName = "${host}";
     networkmanager.enable = true;
+    nftables.enable = true;
     firewall.enable = false;
   };
   services.blueman.enable = config.hm.home-manager.bluetooth.enable;
