@@ -10,11 +10,13 @@
     ./navidrome.nix
     ./searx.nix
     ./nextcloud.nix
+    ./immich.nix
     ./scrutiny.nix
     ./0x0.nix
     ./slskd.nix
     ./postgres.nix
     ./transmission.nix
+    ./forgejo.nix
     ./adguard.nix
     ./glances.nix
     # ./caddy.nix

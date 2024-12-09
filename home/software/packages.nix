@@ -1,10 +1,12 @@
 {
   pkgs,
+  pkgsMaster,
   inputs,
   ...
 }: {
   home.packages = with pkgs; [
     # Archives
+    libsecret
     zip
     xz
     unzip
@@ -17,7 +19,7 @@
     zoxide
     fzf
     bat
-    cava
+    # cava
     feh
     # thefuck
     unrar
@@ -65,24 +67,24 @@
     chromium
     element-desktop
     # signal-desktop
-    (signal-desktop-beta.overrideAttrs {
-      postFixup = ''
-        wrapProgram $out/bin/signal-desktop-beta \
-          --run 'export HTTP_PROXY=socks://127.0.0.1:1081 HTTPS_PROXY=socks://127.0.0.1:1081'
-      '';
-      desktopItems = [
-        (makeDesktopItem {
-          name = "signal";
-          desktopName = "Signal";
-          exec = "signal-desktop-beta --disable-gpu %U";
-          icon = "signal";
-          startupWMClass = "Signal Beta";
-          genericName = "Internet Messenger";
-          keywords = ["call" "signal" "electron" "chat"];
-          categories = ["Network" "InstantMessaging" "Chat"];
-        })
-      ];
-    })
+    # (signal-desktop.overrideAttrs {
+    #   postFixup = ''
+    #     wrapProgram $out/bin/signal-desktop-beta \
+    #       --run 'export HTTP_PROXY=socks://127.0.0.1:1081 HTTPS_PROXY=socks://127.0.0.1:1081'
+    #   '';
+    #   desktopItems = [
+    #     (makeDesktopItem {
+    #       name = "signal";
+    #       desktopName = "Signal";
+    #       exec = "signal-desktop --disable-gpu %U";
+    #       icon = "signal";
+    #       startupWMClass = "Signal Beta";
+    #       genericName = "Internet Messenger";
+    #       keywords = ["call" "signal" "electron" "chat"];
+    #       categories = ["Network" "InstantMessaging" "Chat"];
+    #     })
+    #   ];
+    # })
     # cinny-desktop
     telegram-desktop
     zoom-us
@@ -90,10 +92,18 @@
     mpv
     libreoffice
     zathura
-    todoist-electron
     obsidian
     nicotine-plus
     beets
+    (streamrip.overrideAttrs
+      (old: {
+        src = fetchFromGitHub {
+          owner = "mortalis13";
+          repo = "streamrip";
+          rev = "3ebbdad19362d942af47e71562eda1416a1816c7";
+          sha256 = "sha256-Zh8VDlTrLEHMNK/5KEDcXV34dgofsmC9nnFw/AVRJKA=";
+        };
+      }))
 
     # Development
     cargo
@@ -104,8 +114,9 @@
     texliveFull
     commitizen
     python3
+    go
     # insomnia
-    godot_4-mono
+    godot_4
     nodejs_20
     bun
     nodePackages.pnpm
@@ -115,6 +126,8 @@
     # zlib
     # gnumake
     gh
+    tea
+    git-credential-oauth
     icu74
     jdk17
     filezilla
@@ -126,7 +139,6 @@
     libunwind
     glibc
     # figma-linux
-    direnv
     vscode
     jetbrains.idea-community
     android-studio
@@ -156,7 +168,6 @@
     bottles
     steamcmd
     heroic
-    gamemode
     lutris
     mangohud
     gamescope

@@ -23,8 +23,10 @@ in {
   # Nix
   nix = {
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+    optimise.automatic = true;
     # package = lib.mkIf (host != "server") pkgs.nixVersions.latest;
     settings = {
+      auto-optimise-store = true;
       experimental-features = ["nix-command" "flakes"];
       substituters = [
         "https://nix-gaming.cachix.org"

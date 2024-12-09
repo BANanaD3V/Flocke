@@ -41,7 +41,7 @@
     kernel.sysctl = {
       "vm.max_map_count" = 16777216;
       "fs.file-max" = 524288;
-      "fs.inotify.max_user_watches" = 204800;
+      "fs.inotify.max_user_watches" = 2147483647;
     };
   };
 
@@ -122,8 +122,9 @@
   # Printing support
   services.printing = {
     enable = true;
+    browsed.enable = false;
     openFirewall = true;
-    drivers = [pkgs.epson-escpr];
+    drivers = [pkgs.epson-escpr2 pkgs.epson-escpr];
   };
   security.polkit.enable = true;
   # Flatpak
@@ -176,6 +177,7 @@
   # Env packages
   environment.systemPackages = with pkgs; [
     nh
+    libsecret
     virt-manager
     gnome-disk-utility
     gutenprint
@@ -195,7 +197,9 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["FiraCode" "JetBrainsMono" "DroidSansMono"];})
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.droid-sans-mono
     font-awesome
     manrope
     inter

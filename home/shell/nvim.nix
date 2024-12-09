@@ -3,10 +3,15 @@
   pkgs,
   ...
 }: {
-  home.packages = with pkgs; [
-    inputs.Lumi.packages.${system}.default
-    commitizen
-  ];
+  home = {
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+    packages = with pkgs; [
+      inputs.Lumi.packages.${system}.default
+      commitizen
+    ];
+  };
   programs.lazygit = {
     enable = true;
     settings = {

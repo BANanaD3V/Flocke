@@ -53,7 +53,7 @@
       };
 
       cursor = {
-        enable_hyprcursor = true;
+        enable_hyprcursor = false;
         # no_hardware_cursors = true;
       };
 
