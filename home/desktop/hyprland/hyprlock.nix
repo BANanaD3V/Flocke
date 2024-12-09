@@ -45,15 +45,25 @@ in {
       # Current time
       label {
           monitor =
-          text = cmd[update:1000] echo "<b><big> $(date +"%I:%M %p") </big></b>"
+          text = cmd[update:1000] echo "<big> $(date +"%I:%M") </big>"
           color = rgb(${base05})
-          font_size = 64
-          font_family = JetBrains Mono Nerd Font 10
-          position = 0, 160
+          font_size = 128
+          font_family = Inter Semibold 10
+          position = 0, 256
           halign = center
-          valign = top
+          valign = center
       }
 
+      label {
+          monitor =
+          text = cmd[update:1000] echo "$(date +"%A, %B%e")"
+          color = rgb(${base05})
+          font_size = 24
+          font_family = Inter Regular 10
+          position = 0, 128
+          halign = center
+          valign = center
+      }
 
 
       # Type to unlock
