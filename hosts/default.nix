@@ -14,7 +14,7 @@
     };
 
     extraSpecialArgs = {
-      inherit inputs host isNixOS username useremail pkgsStable pkgsMaster;
+      inherit inputs host isNixOS username useremail pkgsStable;
     };
 
     homeManagerImports = [
