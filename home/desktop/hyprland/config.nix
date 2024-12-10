@@ -65,12 +65,12 @@
           new_optimizations = "on";
           xray = false;
         };
-        drop_shadow = "yes";
-        shadow_range = 4;
-        shadow_render_power = 3;
+        # drop_shadow = "yes";
+        # shadow_range = 4;
+        # shadow_render_power = 3;
         dim_special = 0;
         # multisample_edges = true;
-        "col.shadow" = "rgba(${base00}ee)";
+        # "col.shadow" = "rgba(${base00}ee)";
       };
 
       animations = {
