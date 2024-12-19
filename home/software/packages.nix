@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgsStable,
   inputs,
   ...
 }: {
@@ -66,24 +67,24 @@
     chromium
     element-desktop
     # signal-desktop
-    # (signal-desktop.overrideAttrs {
-    #   postFixup = ''
-    #     wrapProgram $out/bin/signal-desktop-beta \
-    #       --run 'export HTTP_PROXY=socks://127.0.0.1:1081 HTTPS_PROXY=socks://127.0.0.1:1081'
-    #   '';
-    #   desktopItems = [
-    #     (makeDesktopItem {
-    #       name = "signal";
-    #       desktopName = "Signal";
-    #       exec = "signal-desktop --disable-gpu %U";
-    #       icon = "signal";
-    #       startupWMClass = "Signal Beta";
-    #       genericName = "Internet Messenger";
-    #       keywords = ["call" "signal" "electron" "chat"];
-    #       categories = ["Network" "InstantMessaging" "Chat"];
-    #     })
-    #   ];
-    # })
+    (signal-desktop.overrideAttrs {
+      # postFixup = ''
+      #   wrapProgram $out/bin/signal-desktop-beta \
+      #     --run 'export HTTP_PROXY=socks://127.0.0.1:1081 HTTPS_PROXY=socks://127.0.0.1:1081'
+      # '';
+      desktopItems = [
+        (makeDesktopItem {
+          name = "signal";
+          desktopName = "Signal";
+          exec = "signal-desktop --disable-gpu %U";
+          icon = "signal";
+          startupWMClass = "Signal Beta";
+          genericName = "Internet Messenger";
+          keywords = ["call" "signal" "electron" "chat"];
+          categories = ["Network" "InstantMessaging" "Chat"];
+        })
+      ];
+    })
     # cinny-desktop
     telegram-desktop
     zoom-us
@@ -115,7 +116,7 @@
     go
     # insomnia
     godot_4
-    nodejs_20
+    nodejs_23
     bun
     nodePackages.pnpm
     yarn
@@ -163,6 +164,9 @@
 
     # Gaming
     r2modman
+    (tetrio-desktop.overrideAttrs (old: {
+      withTetrioPlus = true;
+    }))
     bottles
     steamcmd
     heroic
