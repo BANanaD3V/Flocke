@@ -7,8 +7,8 @@
   ...
 }:
 with lib; let
-  cfg = import ./config.nix {inherit lib config;};
-  style = import ./style.nix {inherit config;};
+  cfg = import ./rices/minimal/config.nix {inherit lib config;};
+  style = import ./rices/minimal/style.nix {inherit config;};
   spotify_now_playing = import ./scripts/spotify_now_playing.nix {inherit pkgs host;};
   cava_waybar = import ./scripts/cava_waybar.nix {inherit pkgs;};
 in {

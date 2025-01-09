@@ -12,7 +12,7 @@
       cursor_beam_thickness = 9;
 
       foreground = "#${base05}";
-      background = "#${base01}";
+      background = "#${base00}";
       selection_foreground = "#${base01}";
       selection_background = "#${base06}";
       cursor = "#${base06}";

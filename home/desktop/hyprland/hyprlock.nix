@@ -46,10 +46,10 @@ in {
       label {
           monitor =
           text = cmd[update:1000] echo "<big> $(date +"%I:%M") </big>"
-          color = rgb(${base05})
+          color = rgb(${base07})
           font_size = 128
           font_family = Inter Semibold 10
-          position = 0, 256
+          position = 0, 20%
           halign = center
           valign = center
       }
@@ -57,10 +57,10 @@ in {
       label {
           monitor =
           text = cmd[update:1000] echo "$(date +"%A, %B%e")"
-          color = rgb(${base05})
+          color = rgb(${base07})
           font_size = 24
           font_family = Inter Regular 10
-          position = 0, 128
+          position = 0, 12%
           halign = center
           valign = center
       }

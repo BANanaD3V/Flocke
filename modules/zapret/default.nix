@@ -8,8 +8,10 @@
     params = [
       # "--dpi-desync=fake,disorder2"
       "--dpi-desync-repeats=15"
+      "--dpi-desync-tll=0"
       "--dpi-desync-tll6=0"
-      "--dpi-desync=fake,split2"
+      "--dpi-desync=fake,split"
+      "--wssize 1:6"
       "--dpi-desync-fooling=md5sig,badseq"
       "--new"
       "--filter-udp=50000-65535"

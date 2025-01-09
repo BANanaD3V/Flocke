@@ -23,7 +23,7 @@
           amdvlk
           vaapiVdpau
           libvdpau-va-gl
-          rocmPackages.clr.icd
+          # rocmPackages.clr.icd
         ];
 
         extraPackages32 = with pkgs; [

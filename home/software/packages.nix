@@ -24,6 +24,7 @@
     # thefuck
     unrar
     openvpn
+    sshuttle
     ffmpeg-full
     appimage-run
 
@@ -41,7 +42,6 @@
     krita
     gimp
     nautilus
-    gnome-boxes
     kvmtool
     hyprpaper
     inputs.nixpkgs-wayland.packages.${pkgs.system}.swww
@@ -94,7 +94,7 @@
     zathura
     obsidian
     nicotine-plus
-    beets
+    # beets
     (streamrip.overrideAttrs
       (old: {
         src = fetchFromGitHub {
@@ -139,7 +139,7 @@
     glibc
     # figma-linux
     vscode
-    jetbrains.idea-community
+    # jetbrains.idea-community
     android-studio
     # (pkgs.vscode.overrideAttrs (o: let
     #   version = "1.81.1";
@@ -167,9 +167,8 @@
     (tetrio-desktop.overrideAttrs (old: {
       withTetrioPlus = true;
     }))
-    bottles
     steamcmd
-    heroic
+    # heroic
     lutris
     mangohud
     gamescope

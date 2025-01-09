@@ -22,7 +22,7 @@ in {
       border-inactive = base02;
       header = base03;
       highlight = base03;
-      main = base01;
+      main = base00;
       notification = base0D;
       notification-error = base08;
       subtext = base04;

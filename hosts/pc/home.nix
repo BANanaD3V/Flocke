@@ -1,7 +1,7 @@
 {...}: {
   home-manager = {
     graphical.enable = true;
-    colorscheme = "catppuccin";
+    colorscheme = "twilight";
     displays = {
       main = "DP-1";
       displays = [

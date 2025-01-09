@@ -11,11 +11,15 @@
   # User
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = ["wheel" "video" "networkmanager" "adbusers"];
+    extraGroups = ["wheel" "video" "networkmanager" "adbusers" "kvm"];
     shell = pkgs.zsh;
   };
   boot = {
-    kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages =
+      if host == "server"
+      then pkgs.linuxPackages_cachyos-server
+      else pkgs.linuxPackages_cachyos-lto;
+
     # Bootloader.
     # boot.loader.systemd-boot.enable = true;
     # boot.kernelModules = ["v4l2loopback"];
@@ -51,6 +55,7 @@
 
   # Fix USB sticks not mounting or being listed:
   services.devmon.enable = true;
+  services.spice-webdavd.enable = true;
   services.udisks2.enable = true;
   services.gvfs.enable = true;
 
@@ -75,6 +80,10 @@
   # Adb
   programs.adb.enable = true;
   # Podman
+  virtualisation.docker = {
+    enable = true;
+  };
+
   virtualisation.podman.enable = true;
   # Networking
   networking = {
@@ -100,6 +109,11 @@
   services.displayManager.sddm = {
     enable = lib.mkForce config.hm.home-manager.graphical.enable;
     wayland.enable = true;
+    settings = {
+      General = {
+        DefaultSession = "hyprland.desktop";
+      };
+    };
     sugarCandyNix = {
       enable = true; # This enables SDDM automatically and set its theme to
       # "sddm-sugar-candy-nix"
@@ -124,15 +138,15 @@
     enable = true;
     browsed.enable = false;
     openFirewall = true;
-    drivers = [pkgs.epson-escpr2 pkgs.epson-escpr];
+    # drivers = [pkgs.epson-escpr2 pkgs.epson-escpr];
   };
   security.polkit.enable = true;
   # Flatpak
   services.flatpak.enable = true;
-
   # Sound
   security.rtkit.enable = true;
-  hardware.pulseaudio.enable = lib.mkForce false;
+  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa = {
@@ -190,6 +204,13 @@
     polkit
     polkit_gnome
   ];
+
+  # Ananicy
+  services.ananicy = {
+    enable = true;
+    package = pkgs.ananicy-cpp;
+    rulesProvider = pkgs.ananicy-rules-cachyos;
+  };
 
   environment.sessionVariables = {
     FLAKE = "/home/${username}/nixos-config";

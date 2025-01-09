@@ -3,11 +3,15 @@
   username,
   ...
 }: {
+  fonts.packages = [
+    (pkgs.callPackage ./illinois-mono.nix {})
+  ];
   users.users.${username}.packages = with pkgs; [
-    # (pkgs.callPackage ./soundux.nix {})
   ];
 
   environment.systemPackages = [
+    pkgs.gnome-boxes
+
     (pkgs.libsForQt5.callPackage ./tokyo-night-sddm.nix {})
   ];
 }

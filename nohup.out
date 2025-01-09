@@ -1,0 +1,22 @@
+[2025-01-08 11:34:46.903] [info] Using configuration file /home/banana/.config/waybar/config
+[2025-01-08 11:34:46.904] [info] Using CSS file /home/banana/.config/waybar/style.css
+[2025-01-08 11:34:46.911] [info] Hyprland IPC starting
+[2025-01-08 11:34:46.911] [info] Loading persistent workspaces from Waybar config
+[2025-01-08 11:34:46.911] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-01-08 11:34:46.925] [info] Loading persistent workspaces from Waybar config
+[2025-01-08 11:34:46.925] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-01-08 11:34:46.937] [info] Bar configured (width: 2752, height: 49) for output: DP-1
+[2025-01-08 11:34:46.937] [info] Bar configured (width: 2048, height: 49) for output: DP-2
+[2025-01-08 11:47:49.519] [info] Reloading...
+[2025-01-08 11:47:49.523] [info] Using configuration file /home/banana/.config/waybar/config
+[2025-01-08 11:47:49.523] [info] Using CSS file /home/banana/.config/waybar/style.css
+[2025-01-08 11:47:49.529] [info] Loading persistent workspaces from Waybar config
+[2025-01-08 11:47:49.529] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-01-08 11:47:49.539] [info] Loading persistent workspaces from Waybar config
+[2025-01-08 11:47:49.539] [info] Loading persistent workspaces from Hyprland workspace rules
+[2025-01-08 11:47:49.551] [info] Bar configured (width: 2752, height: 49) for output: DP-1
+[2025-01-08 11:47:49.551] [info] Bar configured (width: 2048, height: 49) for output: DP-2
+sh: line 1: activate: command not found
+sh: line 1: activate: command not found
+sh: line 1: activate: command not found
+Gdk-Message: 22:28:35.224: Error reading events from display: Connection reset by peer

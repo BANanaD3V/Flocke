@@ -30,8 +30,8 @@
         ## Properties for the DSP configuration.
         default.clock.rate          = 192000
         #default.clock.allowed-rates = [ 48000 ]
-        default.clock.quantum       = 1024
-        default.clock.min-quantum   = 32
+        default.clock.quantum       = 4096
+        default.clock.min-quantum   = 512
         default.clock.max-quantum   = 8192
         #default.clock.quantum-limit = 8192
         #default.video.width         = 640
