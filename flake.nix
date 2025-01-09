@@ -1,5 +1,5 @@
 {
-  description = "NixOS configuration";
+  description = "What I am about to do has not been approved by the Vatican.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
