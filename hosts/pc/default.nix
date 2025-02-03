@@ -27,11 +27,11 @@
         mountpoint = "/run/media/ssd";
         fstype = "btrfs";
       }
-      {
-        label = "1tb_hdd";
-        mountpoint = "/run/media/hdd";
-        fstype = "btrfs";
-      }
+      # {
+      #   label = "1tb_hdd";
+      #   mountpoint = "/run/media/hdd";
+      #   fstype = "btrfs";
+      # }
     ];
   };
 }

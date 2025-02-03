@@ -12,7 +12,6 @@
   ];
   config = lib.mkIf config.home-manager.hyprland.enable {
     home.packages = with pkgs; [
-      xwaylandvideobridge
       libnotify
       wl-gammarelay-rs
       grimblast

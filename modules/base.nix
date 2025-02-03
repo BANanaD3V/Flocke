@@ -2,6 +2,7 @@
   lib,
   host,
   pkgs,
+  pkgsStable,
   config,
   inputs,
   system,
@@ -14,6 +15,7 @@
     extraGroups = ["wheel" "video" "networkmanager" "adbusers" "kvm"];
     shell = pkgs.zsh;
   };
+  programs.amnezia-vpn.enable = true;
   boot = {
     kernelPackages =
       if host == "server"
@@ -80,10 +82,6 @@
   # Adb
   programs.adb.enable = true;
   # Podman
-  virtualisation.docker = {
-    enable = true;
-  };
-
   virtualisation.podman.enable = true;
   # Networking
   networking = {
@@ -138,7 +136,7 @@
     enable = true;
     browsed.enable = false;
     openFirewall = true;
-    # drivers = [pkgs.epson-escpr2 pkgs.epson-escpr];
+    drivers = [pkgsStable.epson-escpr2 pkgsStable.epson-escpr];
   };
   security.polkit.enable = true;
   # Flatpak

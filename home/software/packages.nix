@@ -1,6 +1,6 @@
 {
   pkgs,
-  pkgsStable,
+  pkgsMaster,
   inputs,
   ...
 }: {
@@ -168,7 +168,7 @@
       withTetrioPlus = true;
     }))
     steamcmd
-    # heroic
+    heroic
     lutris
     mangohud
     gamescope

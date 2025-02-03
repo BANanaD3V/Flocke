@@ -52,7 +52,7 @@ in {
     config = {
       allowUnfree = true;
       permittedInsecurePackages = [
-        "electron-25.9.0"
+        "electron-31.7.7"
       ];
     };
   };

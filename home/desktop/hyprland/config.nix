@@ -209,14 +209,7 @@
         "workspace 7, class:(vesktop)"
         "workspace 6, class:(org.telegram.desktop)"
         "workspace 2, class:(firefox)"
-        "workspace 4, title:Spotify"
-
-        # Xwaylandvideobridge
-
-        "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
-        "noanim,class:^(xwaylandvideobridge)$"
-        "nofocus,class:^(xwaylandvideobridge)$"
-        "noinitialfocus,class:^(xwaylandvideobridge)$"
+        "workspace 4, class:(spotify)"
       ];
 
       # Layer rules
@@ -238,7 +231,6 @@
         "hyprpaper"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "xwaylandvideobridge"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &"
         "swaync"
         "ydotoold"
