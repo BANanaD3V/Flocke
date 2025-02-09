@@ -108,8 +108,8 @@
     cargo
     rustfmt
     rustc
-    dotnetCorePackages.sdk_8_0_2xx
-    dotnet-sdk_8
+    dotnetCorePackages.sdk_8_0_3xx-bin
+    dotnet-sdk
     commitizen
     python3
     go
