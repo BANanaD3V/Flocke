@@ -54,7 +54,6 @@
     imagemagick
     grim
     inputs.nixpkgs-wayland.packages.${system}.slurp
-    libreoffice
     ydotool
     lutgen
 
@@ -90,7 +89,7 @@
     zoom-us
     qdirstat
     mpv
-    libreoffice
+    libreoffice-still
     zathura
     obsidian
     nicotine-plus
@@ -109,8 +108,8 @@
     cargo
     rustfmt
     rustc
-    # dotnetCorePackages.sdk_8_0_2xx
-    # dotnet-sdk_8
+    dotnetCorePackages.sdk_8_0_2xx
+    dotnet-sdk_8
     commitizen
     python3
     go
