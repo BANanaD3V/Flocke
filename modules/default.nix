@@ -13,7 +13,7 @@
     ./steam.nix
     ./gamemode.nix
     ./byedpi
-    ./zapret.nix
+    ./zapret
     ./syncthing.nix
     ./hardware
     ./server
